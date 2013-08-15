@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Test</title>
+
+	<style>
+
+		#grid {
+            background-image: -moz-linear-gradient(45deg, #333 25%, transparent 25%), 
+                              -moz-linear-gradient(-45deg, #333 25%, transparent 25%),
+                              -moz-linear-gradient(45deg, transparent 75%, #333 75%),
+                              -moz-linear-gradient(-45deg, transparent 75%, #333 75%);
+            background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, #333), color-stop(.25, transparent)), 
+                              -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, #333), color-stop(.25, transparent)),
+                              -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.75, transparent), color-stop(.75, #333)),
+                              -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.75, transparent), color-stop(.75, #333));
+
+            -moz-background-size:200px 200px;
+            background-size:200px 200px;
+            -webkit-background-size:200px 201px; /* override value for shitty webkit */
+
+            -webkit-transform: rotateX(75deg) translate(-1000px, 0);
+    
+            background-position:0 0, 100px 0, 100px -100px, 0px 100px;
+            width: 4000px;
+            height: 400px;
+        }
+
+        #stage {
+        	-webkit-perspective: 400px;
+			width: 100%;
+			overflow: hidden;
+        }
+
+	</style>
+
+</head>
+<body>
+	
+	<div id="container">
+
+		<div id="stage">
+			<div id="grid"></div>
+		</div>
+
+	</div>
+
+</body>
+</html>
