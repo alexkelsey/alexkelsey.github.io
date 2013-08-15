@@ -50,7 +50,55 @@
 
 	<script>
 		$(function () {
-			alert("ready");
+
+			var $grid = $('#grid'),
+				$currentX = 0,
+				$startX = 0,
+				$distanceX = 0,
+				$mouseStatus = false;
+
+			$grid.on('mousedown touchstart', function (e) {
+
+				if (e.type === "mousedown") {
+					$startX = parseInt(e.originalEvent.clientX, 10);
+				} else {
+					$startX = parseInt(e.originalEvent.targetTouches[0].clientX, 10);
+				}
+
+				$mouseStatus = true;
+
+			});
+
+			$grid.on('mousemove touchmove', function (e) {
+
+				if ($mouseStatus === true) {
+					if (e.type === "mousemove") {
+						$currentX = parseInt(e.originalEvent.clientX, 10);
+					} else {
+						$currentX = parseInt(e.originalEvent.targetTouches[0].clientX, 10);
+					}
+
+					$distanceX = -($startX - $currentX);
+
+					$grid.css('-webkit-transform', 'rotateX(75deg) translate(' + $distanceX + 'px, 0)');
+
+				}
+
+				
+			});
+
+			$grid.on('mouseup touchend', function (e) {
+
+				$mouseStatus = false;
+
+			});
+
+			$grid.on('mouseout touchleave', function (e) {
+
+				$mouseStatus = false;
+
+			});
+
 		});
 	</script>
 
