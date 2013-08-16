@@ -46,60 +46,50 @@
 
 	</div>
 
-	<script src="js/jquery-1.9.min.js" type="text/javascript"></script>
+<script type="text/javascript">	
+	
+	var draggable = document.getElementById('grid'),
+		dragWidth = draggable.offsetWidth,
+		dragHeight = draggable.offsetHeight,
+		xOffset=null,
+		coordSysX=null,
+		xCoord = 0;
+	
+	function resetTouch () {
+		xOffset = null;
+		coordSysX = null;
+	};
+	
+	draggable.addEventListener('touchmove', function(event) {
+		
+		event.preventDefault();
+		
+		var touch = event.touches[0];
+		
+		if (coordSysX == null) {
+			coordSysX = draggable.offsetLeft + xCoord;
+		} else {
+			coordSysX = draggable.offsetLeft;
+		};
+		
+		if (xOffset == null) {
+			xOffset = touch.pageX - coordSysX;
+			
+		} else {
 
-	<script>
-		$(function () {
+			xCoord = touch.pageX - xOffset - coordSysX;
+		
+			var dragMove = "rotateX(75deg) translate(" + xCoord + "px, 0)";
+		
+		};
+		
+		draggable.style.webkitTransform = dragMove;
+	});
 
-			var $grid = $('#grid'),
-				$currentX = 0,
-				$startX = 0,
-				$distanceX = 0,
-				$mouseStatus = false;
+	draggable.addEventListener('touchend', function(event) {
+		resetTouch();		
+	});
 
-			$grid.on('mousedown touchstart', function (e) {
-
-				if (e.type === "mousedown") {
-					$startX = parseInt(e.originalEvent.clientX, 10);
-				} else {
-					$startX = parseInt(e.originalEvent.targetTouches[0].clientX, 10);
-				}
-
-				$mouseStatus = true;
-
-			});
-
-			$grid.on('mousemove touchmove', function (e) {
-
-				if ($mouseStatus === true) {
-					if (e.type === "mousemove") {
-						$currentX = parseInt(e.originalEvent.clientX, 10);
-					} else {
-						$currentX = parseInt(e.originalEvent.targetTouches[0].clientX, 10);
-					}
-
-					$distanceX = -($startX - $currentX);
-
-					$grid.css('-webkit-transform', 'rotateX(75deg) translate(' + $distanceX + 'px, 0)');
-
-				}
-
-				
-			});
-
-			$grid.on('mouseup touchend', function (e) {
-
-				$mouseStatus = false;
-
-			});
-
-			$grid.on('mouseout touchleave', function (e) {
-
-				$mouseStatus = false;
-
-			});
-
-		});
 	</script>
 
 </body>
