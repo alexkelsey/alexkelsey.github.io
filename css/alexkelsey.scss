@@ -1,0 +1,597 @@
+/* Colours */
+
+$background: #363640;
+
+$menu: #171721;
+
+$accent: #F22E9C;
+
+
+
+
+
+body {
+	background-color: $background;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+
+
+
+
+/* Logo */
+
+#logo {
+	color: #FFF;
+	left: 0;
+	padding: 0;
+	position: absolute;
+	top: 45px;
+	width: 55%;
+	z-index: 3;
+}
+
+#logo h1 {
+	float: left;
+	font-family: 'Lato', sans-serif;
+	font-size: 52px;
+	font-weight: 100;
+	margin: 0 0 0 20px;
+	text-transform: uppercase;
+}
+
+#logo em {
+	color: $accent;
+	font-style: normal;
+}
+
+#logo img {
+	float: left;
+	margin: 3px 0 0;
+	max-height: 62px;
+}
+
+
+
+
+
+/* Navigation */
+
+#navigation {
+	background-color: $menu;
+	height: 75px;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	top: 40px;
+	width: 336px;
+	z-index: 4;
+}
+
+#mobileNavigation {
+	position: relative;
+}
+
+#navigation a,
+#mobileNavigation a {
+	color: #FFF;
+	display: block;
+	float: left;
+	font-family: 'Lato', sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+	height: 35px;
+	line-height: 16px;
+	margin: 0 8px;
+	padding: 17px 8px;
+	text-decoration: none;
+	width: 80px;
+}
+
+#navigation a {
+	border-bottom: 6px solid #FFF;
+	height: 41px;
+
+	-webkit-transition: height 150ms ease-in-out;
+    -moz-transition: height 150ms ease-in-out;
+    -ms-transition: height 150ms ease-in-out;
+    transition: height 150ms ease-in-out;
+}
+
+#navigation a:hover {
+	height: 35px;
+}
+
+#mobileNavigation a {
+	float: none;
+	margin: 10px 52px;
+}
+
+#mobileCenter {
+	left: 0;
+	margin: -122px 0 0;
+	position: absolute;
+	top: 50%;
+}
+
+#navigation .active,
+#navigation .active:hover,
+#mobileNavigation .active,
+#mobileNavigation .active:hover {
+	border-bottom: 6px solid $accent;
+	height: 35px;
+}
+
+#navigation a:hover {
+	border-bottom: 6px solid #FFF;
+}
+
+#navigation strong,
+#mobileNavigation strong {
+	display: block;
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+
+
+
+
+
+
+#wrapper {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin-top: 0;
+	overflow: hidden;
+	top: 0;
+	z-index: 3;
+
+	/* Prevent native touch events on Windows */
+	-ms-touch-action: none;
+
+	/* Prevent the callout on tap-hold and text selection */
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	/* Prevent text resize on orientation change, useful for web-apps */
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+#scroller {
+	list-style: none;
+	margin: -150px 0 0;
+	padding: 0;
+	position: absolute;
+	top: 50%;
+
+	/* Prevent elements to be highlighted on tap */
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+
+	/* Put the scroller into the HW Compositing layer right from the start */
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+}
+
+#scroller li {
+	float: left;
+	height: 300px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	text-align: center;
+	width: 280px;
+}
+
+#scroller li img {
+	height: 300px;
+	width: 250px;
+}
+
+
+
+
+
+/* Play video icons */
+
+.overlay {
+	background-color: transparent;
+	border: 3px solid rgba(0, 0, 0, 0.5);
+	border-radius: 35px;
+	height: 64px;
+	right: 30px;
+	line-height: 62px;
+	margin: 0 0 0 -35px;
+	position: absolute;
+	text-align: center;
+	bottom: 10px;
+	width: 63px;
+	z-index: 11;
+}
+
+.overlay span {
+	background-color: rgba(0, 0, 0, 0.7);
+	border: 5px solid #FFF;
+	border-radius: 64px;
+	display: block;
+	height: 54px;
+	width: 54px;
+}
+
+li:hover .overlay span {
+	background-color: rgba(0, 0, 0, 0.9);
+}
+
+.overlay i {
+	color: #FFF;
+	font-size: 24px;
+	margin: 0 0 0 3px;
+}
+
+li:hover .overlay i {
+	color: $accent;
+}
+
+
+
+
+
+.scrollerNavigation {
+	background-color: transparent;
+	border: 3px solid rgba(0, 0, 0, 0.5);
+	border-radius: 35px;
+	cursor: pointer;
+	font-size: 24px;
+	height: 64px;
+	line-height: 53px;
+	margin: -53px 0 0;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	width: 63px;
+	z-index: 10;
+
+	-webkit-transition: opacity 400ms ease-in-out;
+    -moz-transition: opacity 400ms ease-in-out;
+    -ms-transition: opacity 400ms ease-in-out;
+    transition: opacity 400ms ease-in-out;
+}
+
+.scrollerNavigation span {
+	background-color: rgba(0, 0, 0, 0.7);
+	border: 5px solid #FFF;
+	border-radius: 64px;
+	display: block;
+	height: 54px;
+	width: 54px;
+}
+
+.scrollerNavigation:hover span {
+	background-color: rgba(0, 0, 0, 0.9);
+}
+
+.scrollerNavigation.disabled {
+	opacity: 0.3;
+}
+
+.scrollerNavigation i {
+	color: #FFF;
+	font-size: 24px;
+}
+
+.scrollerNavigation:hover i {
+	color: $accent;
+}
+
+#scrollerPrevious { left: 5px; }
+
+#scrollerNext { right: 5px; }
+
+#horizon {
+	background: -moz-linear-gradient(top, $background 0%, $background 83%, transparent 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $background), color-stop(83%, $background), color-stop(100%, transparent));
+	background: -webkit-linear-gradient(top, $background 0%, $background 83%, transparent 100%);
+	background: -o-linear-gradient(top, $background 0%, $background 83%, transparent 100%);
+	background: -ms-linear-gradient(top, $background 0%, $background 83%, transparent 100%);
+	background: linear-gradient(to bottom, $background 0%, $background 83%, transparent 100%);
+
+	height: 60%;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 2;
+}
+
+#grid {
+	background-color: $background;
+	background-image: -moz-linear-gradient(45deg, $accent 25%, transparent 25%), -moz-linear-gradient(-45deg, $accent 25%, transparent 25%), -moz-linear-gradient(45deg, transparent 75%, $accent 75%), -moz-linear-gradient(-45deg, transparent 75%, $accent 75%);
+	background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, #eb008a), color-stop(0.25, transparent)), -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.25, #eb008a), color-stop(0.25, transparent)), -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.75, transparent), color-stop(0.75, #eb008a)), -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.75, transparent), color-stop(0.75, #eb008a));
+	-moz-background-size: 80px 80px;
+	background-size: 80px 80px;
+	-webkit-background-size: 80px 80px;
+
+	-webkit-transform: rotateX(80deg) translate(0, 0);
+	-moz-transform: rotateX(80deg) translate(0, 0);
+	-ms-transform: rotateX(80deg) translate(0, 0);
+	-o-transform: rotateX(80deg) translate(0, 0);
+	transform: rotateX(80deg) translate(0, 0);
+
+	-webkit-transform-origin: top;
+	-moz-transform-origin: top;
+	-ms-transform-origin: top;
+	-o-transform-origin: top;
+	transform-origin: top;
+
+	background-position: 0 0, 40px 0, 40px -40px, 0px 40px;
+	height: 120%;
+	left: -2000px;
+	position: relative;
+	top: 50%;
+	width: 6000px;
+}
+
+#stage {
+	background: $background;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+
+	-webkit-perspective: 600px;
+	-moz-perspective: 600px;
+	-ms-perspective: 600px;
+	perspective: 600px;
+}
+
+#mobileNavigation {
+	display: none;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 200px;
+	z-index: 21;
+
+	transform: translate(200px, 0);
+	-ms-transform: translate(200px, 0);
+	-webkit-transform: translate(200px, 0);
+	-moz-transform: translate(200px, 0);
+
+	-webkit-transition: -webkit-transform 500ms ease-in-out;
+    -moz-transition: -moz-transform 500ms ease-in-out;
+    -ms-transition: -ms-transform 500ms ease-in-out;
+    transition: transform 500ms ease-in-out;
+}
+
+#mobileNavigation.open {
+	transform: translate(0, 0);
+	-ms-transform: translate(0, 0);
+	-webkit-transform: translate(0, 0);
+}
+
+#mobileTab {
+	background-color: $menu;
+	color: #FFF;
+	font-size: 28px;
+	height: 50px;
+	line-height: 50px;
+	position: absolute;
+	text-align: center;
+	top: 52px;
+	left: -50px;
+	width: 50px;
+}
+
+#mobileMenu {
+	background-color: $menu;
+	height: 100%;
+	width: 100%;
+}
+
+#mobileCaptureEvent {
+	display: none;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 20;
+}
+
+#mobileCaptureEvent.open { display: block; }
+
+#videoPlayer {
+    background-color: $menu;
+    display: block;
+    height: 315px;
+	left: 50%;
+    margin: -157px 0 0 -283px;
+    padding: 10px;
+	position: absolute;
+    top: -300px;
+    width: 576px;
+    z-index: 4;
+
+    -webkit-transition: opacity 500ms ease-in-out;
+    -moz-transition: opacity 500ms ease-in-out;
+    -ms-transition: opacity 500ms ease-in-out;
+    transition: opacity 500ms ease-in-out;
+}
+
+#videoPlayer.dropin {
+	-webkit-animation: dropin 0.5s 1 ease-in forwards;
+	-moz-animation: dropin 0.5s 1 ease-in forwards;
+	-o-animation: dropin 0.5s 1 ease-in forwards;
+	animation: dropin 0.5s 1 ease-in forwards;
+}
+
+#videoPlayer.fadeOut {
+	opacity: 0;
+}
+
+@-webkit-keyframes dropin {
+	0    { top: -300px; }
+	20%  { top: 44%; -webkit-transform: rotate(15deg); }
+	34%  { top: 45%; }
+	48%  { top: 46%; -webkit-transform: rotate(-10deg); }
+	58%  { top: 45%; }
+	68%  { top: 48%; -webkit-transform: rotate(5deg); }
+	76%  { top: 47%; }
+	84%  { top: 48%; -webkit-transform: rotate(-5deg); }
+	90%  { top: 50%; -webkit-transform: rotate(0deg); }
+	100% { top: 50%; }
+}
+
+@-moz-keyframes dropin {
+	0    { top: -300px; }
+	20%  { top: 44%; -moz-transform: rotate(15deg); }
+	34%  { top: 45%; }
+	48%  { top: 46%; -moz-transform: rotate(-10deg); }
+	58%  { top: 45%; }
+	68%  { top: 48%; -moz-transform: rotate(5deg); }
+	76%  { top: 47%; }
+	84%  { top: 48%; -moz-transform: rotate(-5deg); }
+	90%  { top: 50%; -moz-transform: rotate(0deg); }
+	100% { top: 50%; }
+}
+
+@-o-keyframes dropin {
+	0    { top: -300px; }
+	20%  { top: 44%; -o-transform: rotate(15deg); }
+	34%  { top: 45%; }
+	48%  { top: 46%; -o-transform: rotate(-10deg); }
+	58%  { top: 45%; }
+	68%  { top: 48%; -o-transform: rotate(5deg); }
+	76%  { top: 47%; }
+	84%  { top: 48%; -o-transform: rotate(-5deg); }
+	90%  { top: 50%; -o-transform: rotate(0deg); }
+	100% { top: 50%; }
+}
+
+@keyframes dropin {
+	0    { top: -300px; }
+	20%  { top: 44%; transform: rotate(15deg); }
+	34%  { top: 45%; }
+	48%  { top: 46%; transform: rotate(-10deg); }
+	58%  { top: 45%; }
+	68%  { top: 48%; transform: rotate(5deg); }
+	76%  { top: 47%; }
+	84%  { top: 48%; transform: rotate(-5deg); }
+	90%  { top: 50%; transform: rotate(0deg); }
+	100% { top: 50%; }
+}
+
+#videoClose {
+	background-color: $menu;
+	cursor: pointer;
+	height: 50px;
+	position: absolute;
+	top: 0;
+	right: -50px;
+	width: 50px;
+}
+
+
+
+
+
+/* Width Based */
+
+@media all and (max-width: 767px) {
+	#navigation { display: none; }
+	#mobileNavigation { display: block; }
+	#logo { width: 100%; }
+}
+
+@media all and (max-width: 549px) {
+	#navigation { display: none; }
+	#mobileNavigation { display: block; }
+	#logo { top: 25px; }
+	#mobileTab { top: 32px; }
+	#logo h1 {
+		font-size: 40px;
+		line-height: 65px;
+	}
+}
+
+@media all and (max-width: 399px) {
+	#navigation { display: none; }
+	#mobileNavigation { display: block; }
+	#logo h1 {
+		font-size: 28px;
+		line-height: 65px;
+	}
+}
+
+@media all and (max-width: 321px) {
+	#wrapper #scroller li { width: 320px; }
+}
+
+/* Height Based */
+
+@media all and (max-height: 550px) {
+	#logo { top: 25px; }
+	#mobileTab { top: 32px; }
+}
+
+@media all and (max-height: 500px) {
+	#scroller { top: auto; bottom: 10%; }
+}
+
+@media all and (max-height: 450px) {
+	#scroller { top: auto; bottom: 0%; }
+}
+
+@media all and (max-height: 400px) {
+	#scroller { top: auto; bottom: 0%; }
+	#logo { top: 5px; }
+	#mobileTab { top: 12px; }
+	#logo h1 {
+		font-size: 28px;
+		line-height: 65px;
+	}
+}
+
+@media all and (max-height: 365px) {
+	#logo { top: 5px; }
+	#mobileTab { top: 12px; }
+	#logo h1 {
+		font-size: 28px;
+		line-height: 65px;
+	}
+	#wrapper #scroller {
+		bottom: 20%;
+	}
+	#wrapper #scroller li {
+		height: 200px;
+		width: 170px;
+	}
+	#wrapper #scroller li img {
+		height: 200px;
+		width: 167px; 
+	}
+	#scroller li .overlay {
+		bottom: 20px;
+		left: 50%;
+	}
+}
+
+@media all and (max-height: 330px) {
+	#wrapper #scroller { bottom: 10%; }
+}

@@ -1,13 +1,174 @@
----
-layout: default
-title: Your New Jekyll Site
----
+<!doctype html>
 
-<div id="home">
-  <h1>Blog Posts 111111</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
+<html lang="en">
+
+<head>
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<title>Alex Kelsey</title>
+
+	<link rel="shortcut icon" href="favicon.ico">
+	<link media="all" rel="stylesheet" type="text/css" href="css/alexkelsey.css" />
+	<link media="all" rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
+
+</head>
+
+<body onload="loaded()">
+
+	<div id="logo">
+		<h1><em>Alex</em> Kelsey</h1>
+		<img src="img/alexkelsey_logo_sm.png" alt="Alex Kelsey" title="Alex Kelsey" />
+	</div>
+
+	<div id="navigation">
+		<a href="#" class="active"><strong>Animation</strong> Showreel</a>
+		<a href="#"><strong>UX</strong> Design</a>
+		<a href="#"><strong>Download</strong> CV</a>
+	</div>
+
+	<div id="wrapper">
+
+		<ul id="scroller">
+			<li>
+				<!-- Default -->
+				<a href="http://player.vimeo.com/video/82940482">
+		            <img src="img/nerd.png">
+		            <div class="overlay"><span><i class="fa fa-play"></i></span></div>
+		        </a>
+			</li>
+
+			<li>
+				<!-- Run -->
+				<a href="http://player.vimeo.com/video/82457522">
+		            <img src="img/nerd_run.png">
+		            <div class="overlay"><span><i class="fa fa-play"></i></span></div>
+		        </a>
+			</li>
+
+			<li>
+				<!-- Computer -->
+				<a href="http://player.vimeo.com/video/82457521">
+		            <img src="img/nerd_computer.png">
+		            <div class="overlay"><span><i class="fa fa-play"></i></span></div>
+		        </a>
+			</li>
+
+			<li>
+				<!-- Guitar -->
+				<a href="http://player.vimeo.com/video/82940482">
+		            <img src="img/nerd_guitar.png">
+		            <div class="overlay"><span><i class="fa fa-play"></i></span></div>
+		        </a>
+			</li>
+
+			<li>
+				<!-- Walk -->
+				<a href="http://player.vimeo.com/video/82457520">
+		            <img src="img/nerd_walk.png">
+		            <div class="overlay"><span><i class="fa fa-play"></i></span></div>
+		        </a>
+			</li>
+
+			<li>
+				<!-- Default -->
+				<a href="http://player.vimeo.com/video/82940482">
+		            <img src="img/nerd.png">
+		            <div class="overlay"><span><i class="fa fa-play"></i></span></div>
+		        </a>
+			</li>
+
+			<li>
+				<!-- Run -->
+				<a href="http://player.vimeo.com/video/82457522">
+		            <img src="img/nerd_run.png">
+		            <div class="overlay"><span><i class="fa fa-play"></i></span></div>
+		        </a>
+			</li>
+
+			<li>
+				<!-- Computer -->
+				<a href="http://player.vimeo.com/video/82457521">
+		            <img src="img/nerd_computer.png">
+		            <div class="overlay"><span><i class="fa fa-play"></i></span></div>
+		        </a>
+			</li>
+
+			<li>
+				<!-- Guitar -->
+				<a href="http://player.vimeo.com/video/82940482">
+		            <img src="img/nerd_guitar.png">
+		            <div class="overlay"><span><i class="fa fa-play"></i></span></div>
+		        </a>
+			</li>
+
+			<li>
+				<!-- Walk -->
+				<a href="http://player.vimeo.com/video/82457520">
+		            <img src="img/nerd_walk.png">
+		            <div class="overlay"><span><i class="fa fa-play"></i></span></div>
+		        </a>
+			</li>
+		</ul>
+
+		<div id="scrollerPrevious" class="scrollerNavigation disabled"><span><i class="fa fa-arrow-left"></i></span></div>
+		<div id="scrollerNext" class="scrollerNavigation"><span><i class="fa fa-arrow-right"></i></span></div>
+
+	</div>
+
+	<div id="horizon"></div>
+
+	<div id="stage">
+		<div id="grid"></div>
+	</div>
+
+	<div id="videoPlayer">
+		<div id="videoClose">
+			<svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+				<g>
+					<path fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="bevel" d="M 12.5,37.5 37.5,12.5"/>
+					<path fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="bevel" d="M 12.5,12.5 37.5,37.5"/>
+				</g>
+			</svg>
+		</div>
+
+		<div id="videoContent"></div>
+	</div>
+
+	<div id="mobileCaptureEvent"></div>
+
+	<div id="mobileNavigation">
+		<div id="mobileTab">
+			<span class="si-icon si-icon-hamburger-cross" data-icon-name="hamburgerCross"></span>
+		</div>
+		
+		<div id="mobileMenu">
+			<div id="mobileCenter">
+				<a href="#" class="active"><strong>Animation</strong> Showreel</a>
+				<a href="#"><strong>UX</strong> Design</a>
+				<a href="#"><strong>Download</strong> CV</a>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/iscroll-probe.js"></script>
+	<script type="text/javascript" src="js/alexkelsey.js"></script>
+	<script type="text/javascript" src="js/snap.svg-min.js"></script>
+	<script type="text/javascript" src="js/modernizr.custom.js"></script>
+	<script type="text/javascript">
+		var svgIconConfig={hamburgerCross:{url:'svg/hamburger.svg',animation:[{el:'path:nth-child(1)',animProperties:{from:{val:'{"path":"m 10,15 30,0"}'},to:{val:'{"path":"M 12.5,37.5 37.5,12.5"}'}}},{el:'path:nth-child(2)',animProperties:{from:{val:'{"transform":"s1 1","opacity":1}',before:'{"transform":"s0 0"}'},to:{val:'{"opacity":0}'}}},{el:'path:nth-child(3)',animProperties:{from:{val:'{"path":"m 10,35 30,0"}'},to:{val:'{"path":"M 12.5,12.5 37.5,37.5"}'}}}]}};
+	</script>
+	<script type="text/javascript" src="js/svgicons.js"></script>
+	<script>
+		(function() {
+			[].slice.call(document.querySelectorAll('.si-icon')).forEach(function(el) {
+				var svgicon = new svgIcon(el, svgIconConfig);
+			});
+		})();
+	</script>
+</body>
+
+</html>
