@@ -96,11 +96,11 @@ document.addEventListener('touchmove', function (e) {
 }, false);
 
 document.getElementById('scrollerNext').addEventListener('tap', function (e) {
-    myScroll.next(1600, IScroll.utils.ease.elastic);
+    myScroll.next(400, IScroll.utils.ease.circular);
 }, false);
 
 document.getElementById('scrollerPrevious').addEventListener('tap', function (e) {
-    myScroll.prev(1600, IScroll.utils.ease.elastic);
+    myScroll.prev(400, IScroll.utils.ease.circular);
 }, false);
 
 var videoLinks = document.querySelectorAll('#scroller a'),
