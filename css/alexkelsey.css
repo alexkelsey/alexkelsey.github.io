@@ -1,5 +1,4 @@
 /* Colours */
-/* line 13, alexkelsey.scss */
 body {
   background-color: #363640;
   margin: 0;
@@ -8,7 +7,6 @@ body {
 }
 
 /* Logo */
-/* line 26, alexkelsey.scss */
 #logo {
   color: #FFF;
   left: 0;
@@ -19,7 +17,6 @@ body {
   z-index: 3;
 }
 
-/* line 36, alexkelsey.scss */
 #logo h1 {
   float: left;
   font-family: 'Lato', sans-serif;
@@ -29,13 +26,11 @@ body {
   text-transform: uppercase;
 }
 
-/* line 45, alexkelsey.scss */
 #logo em {
   color: #f22e9c;
   font-style: normal;
 }
 
-/* line 50, alexkelsey.scss */
 #logo img {
   float: left;
   margin: 3px 0 0;
@@ -43,9 +38,7 @@ body {
 }
 
 /* Navigation */
-/* line 62, alexkelsey.scss */
 #navigation {
-  background-color: #171721;
   height: 75px;
   overflow: hidden;
   position: absolute;
@@ -55,12 +48,10 @@ body {
   z-index: 4;
 }
 
-/* line 73, alexkelsey.scss */
 #mobileNavigation {
   position: relative;
 }
 
-/* line 78, alexkelsey.scss */
 #navigation a,
 #mobileNavigation a {
   color: #FFF;
@@ -77,28 +68,22 @@ body {
   width: 80px;
 }
 
-/* line 93, alexkelsey.scss */
 #navigation a {
   border-bottom: 6px solid #FFF;
   height: 41px;
   -webkit-transition: height 150ms ease-in-out;
-  -moz-transition: height 150ms ease-in-out;
-  -ms-transition: height 150ms ease-in-out;
   transition: height 150ms ease-in-out;
 }
 
-/* line 103, alexkelsey.scss */
 #navigation a:hover {
   height: 35px;
 }
 
-/* line 107, alexkelsey.scss */
 #mobileNavigation a {
   float: none;
   margin: 10px 52px;
 }
 
-/* line 112, alexkelsey.scss */
 #mobileCenter {
   left: 0;
   margin: -122px 0 0;
@@ -106,7 +91,6 @@ body {
   top: 50%;
 }
 
-/* line 122, alexkelsey.scss */
 #navigation .active,
 #navigation .active:hover,
 #mobileNavigation .active,
@@ -115,12 +99,10 @@ body {
   height: 35px;
 }
 
-/* line 127, alexkelsey.scss */
 #navigation a:hover {
   border-bottom: 6px solid #FFF;
 }
 
-/* line 132, alexkelsey.scss */
 #navigation strong,
 #mobileNavigation strong {
   display: block;
@@ -129,7 +111,6 @@ body {
   font-weight: 700;
 }
 
-/* line 145, alexkelsey.scss */
 #wrapper {
   position: absolute;
   width: 100%;
@@ -138,40 +119,24 @@ body {
   overflow: hidden;
   top: 0;
   z-index: 3;
-  /* Prevent native touch events on Windows */
-  -ms-touch-action: none;
-  /* Prevent the callout on tap-hold and text selection */
-  -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  /* Prevent text resize on orientation change, useful for web-apps */
-  -webkit-text-size-adjust: none;
-  -moz-text-size-adjust: none;
-  -ms-text-size-adjust: none;
-  -o-text-size-adjust: none;
   text-size-adjust: none;
 }
 
-/* line 172, alexkelsey.scss */
 #scroller {
   list-style: none;
   margin: -150px 0 0;
   padding: 0;
   position: absolute;
   top: 50%;
-  /* Prevent elements to be highlighted on tap */
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  /* Put the scroller into the HW Compositing layer right from the start */
+  -webkit-tap-highlight-color: transparent;
   -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
   transform: translateZ(0);
 }
 
-/* line 190, alexkelsey.scss */
 #scroller li {
   float: left;
   height: 300px;
@@ -182,32 +147,31 @@ body {
   width: 280px;
 }
 
-/* line 200, alexkelsey.scss */
 #scroller li img {
   height: 300px;
   width: 250px;
 }
 
 /* Play video icons */
-/* line 211, alexkelsey.scss */
 .overlay {
   background-color: transparent;
-  border: 3px solid rgba(0, 0, 0, 0.5);
+  border: 3px solid rgba(0, 0, 0, 0.9);
   border-radius: 35px;
+  -webkit-box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.4);
   height: 64px;
-  right: 30px;
+  left: 50%;
   line-height: 62px;
-  margin: 0 0 0 -35px;
+  margin: -32px 0 0 -32px;
   position: absolute;
   text-align: center;
-  bottom: 10px;
-  width: 63px;
+  top: 50%;
+  width: 64px;
   z-index: 11;
 }
 
-/* line 226, alexkelsey.scss */
 .overlay span {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.9);
   border: 5px solid #FFF;
   border-radius: 64px;
   display: block;
@@ -215,92 +179,66 @@ body {
   width: 54px;
 }
 
-/* line 235, alexkelsey.scss */
 li:hover .overlay span {
   background-color: rgba(0, 0, 0, 0.9);
 }
 
-/* line 239, alexkelsey.scss */
 .overlay i {
   color: #FFF;
   font-size: 24px;
   margin: 0 0 0 3px;
 }
 
-/* line 245, alexkelsey.scss */
 li:hover .overlay i {
   color: #f22e9c;
 }
 
-/* line 253, alexkelsey.scss */
 .scrollerNavigation {
   background-color: transparent;
-  border: 3px solid rgba(0, 0, 0, 0.5);
-  border-radius: 35px;
+  border-radius: 3px;
+  bottom: 0;
   cursor: pointer;
   font-size: 24px;
-  height: 64px;
-  line-height: 53px;
-  margin: -53px 0 0;
+  height: 70px;
+  line-height: 70px;
   position: absolute;
   text-align: center;
-  top: 50%;
-  width: 63px;
-  z-index: 10;
-  -webkit-transition: opacity 400ms ease-in-out;
-  -moz-transition: opacity 400ms ease-in-out;
-  -ms-transition: opacity 400ms ease-in-out;
   transition: opacity 400ms ease-in-out;
+  width: 70px;
+  z-index: 10;
 }
 
-/* line 274, alexkelsey.scss */
 .scrollerNavigation span {
-  background-color: rgba(0, 0, 0, 0.7);
-  border: 5px solid #FFF;
-  border-radius: 64px;
-  display: block;
-  height: 54px;
-  width: 54px;
-}
-
-/* line 283, alexkelsey.scss */
-.scrollerNavigation:hover span {
   background-color: rgba(0, 0, 0, 0.9);
+  display: block;
+  height: 70px;
+  width: 70px;
 }
 
-/* line 287, alexkelsey.scss */
 .scrollerNavigation.disabled {
   opacity: 0.3;
 }
 
-/* line 291, alexkelsey.scss */
 .scrollerNavigation i {
   color: #FFF;
   font-size: 24px;
 }
 
-/* line 296, alexkelsey.scss */
 .scrollerNavigation:hover i {
   color: #f22e9c;
 }
 
-/* line 300, alexkelsey.scss */
 #scrollerPrevious {
-  left: 5px;
+  left: 0;
 }
 
-/* line 302, alexkelsey.scss */
 #scrollerNext {
-  right: 5px;
+  right: 0;
 }
 
-/* line 304, alexkelsey.scss */
 #horizon {
-  background: -moz-linear-gradient(top, #363640 0%, #363640 83%, transparent 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #363640), color-stop(83%, #363640), color-stop(100%, transparent));
+  background: -webkit-gradient(linear, left top, left bottom, from(#363640), color-stop(83%, #363640), to(transparent));
   background: -webkit-linear-gradient(top, #363640 0%, #363640 83%, transparent 100%);
-  background: -o-linear-gradient(top, #363640 0%, #363640 83%, transparent 100%);
-  background: -ms-linear-gradient(top, #363640 0%, #363640 83%, transparent 100%);
   background: linear-gradient(to bottom, #363640 0%, #363640 83%, transparent 100%);
   height: 60%;
   position: absolute;
@@ -309,23 +247,15 @@ li:hover .overlay i {
   z-index: 2;
 }
 
-/* line 319, alexkelsey.scss */
 #grid {
   background-color: #363640;
-  background-image: -moz-linear-gradient(45deg, #f22e9c 25%, transparent 25%), -moz-linear-gradient(-45deg, #f22e9c 25%, transparent 25%), -moz-linear-gradient(45deg, transparent 75%, #f22e9c 75%), -moz-linear-gradient(-45deg, transparent 75%, #f22e9c 75%);
   background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, #eb008a), color-stop(0.25, transparent)), -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.25, #eb008a), color-stop(0.25, transparent)), -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.75, transparent), color-stop(0.75, #eb008a)), -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.75, transparent), color-stop(0.75, #eb008a));
-  -moz-background-size: 80px 80px;
-  background-size: 80px 80px;
   -webkit-background-size: 80px 80px;
+  background-size: 80px 80px;
   -webkit-transform: rotateX(80deg) translate(0, 0);
-  -moz-transform: rotateX(80deg) translate(0, 0);
-  -ms-transform: rotateX(80deg) translate(0, 0);
-  -o-transform: rotateX(80deg) translate(0, 0);
   transform: rotateX(80deg) translate(0, 0);
   -webkit-transform-origin: top;
-  -moz-transform-origin: top;
   -ms-transform-origin: top;
-  -o-transform-origin: top;
   transform-origin: top;
   background-position: 0 0, 40px 0, 40px -40px, 0px 40px;
   height: 120%;
@@ -335,7 +265,6 @@ li:hover .overlay i {
   width: 6000px;
 }
 
-/* line 347, alexkelsey.scss */
 #stage {
   background: #363640;
   height: 100%;
@@ -345,12 +274,9 @@ li:hover .overlay i {
   width: 100%;
   z-index: 1;
   -webkit-perspective: 600px;
-  -moz-perspective: 600px;
-  -ms-perspective: 600px;
   perspective: 600px;
 }
 
-/* line 362, alexkelsey.scss */
 #mobileNavigation {
   display: none;
   height: 100%;
@@ -359,24 +285,19 @@ li:hover .overlay i {
   top: 0;
   width: 200px;
   z-index: 21;
-  transform: translate(200px, 0);
-  -ms-transform: translate(200px, 0);
   -webkit-transform: translate(200px, 0);
-  -moz-transform: translate(200px, 0);
+  -ms-transform: translate(200px, 0);
+  transform: translate(200px, 0);
   -webkit-transition: -webkit-transform 500ms ease-in-out;
-  -moz-transition: -moz-transform 500ms ease-in-out;
-  -ms-transition: -ms-transform 500ms ease-in-out;
   transition: transform 500ms ease-in-out;
 }
 
-/* line 382, alexkelsey.scss */
 #mobileNavigation.open {
   transform: translate(0, 0);
   -ms-transform: translate(0, 0);
   -webkit-transform: translate(0, 0);
 }
 
-/* line 388, alexkelsey.scss */
 #mobileTab {
   background-color: #171721;
   color: #FFF;
@@ -390,14 +311,12 @@ li:hover .overlay i {
   width: 50px;
 }
 
-/* line 401, alexkelsey.scss */
 #mobileMenu {
   background-color: #171721;
   height: 100%;
   width: 100%;
 }
 
-/* line 407, alexkelsey.scss */
 #mobileCaptureEvent {
   display: none;
   height: 100%;
@@ -408,12 +327,10 @@ li:hover .overlay i {
   z-index: 20;
 }
 
-/* line 417, alexkelsey.scss */
 #mobileCaptureEvent.open {
   display: block;
 }
 
-/* line 419, alexkelsey.scss */
 #videoPlayer {
   background-color: #171721;
   display: block;
@@ -423,256 +340,16 @@ li:hover .overlay i {
   padding: 10px;
   position: absolute;
   top: -300px;
+  -webkit-transition: top 2s ease-in-out;
+  transition: top 2s ease-in-out;
   width: 576px;
   z-index: 4;
-  -webkit-transition: opacity 500ms ease-in-out;
-  -moz-transition: opacity 500ms ease-in-out;
-  -ms-transition: opacity 500ms ease-in-out;
-  transition: opacity 500ms ease-in-out;
 }
 
-/* line 437, alexkelsey.scss */
 #videoPlayer.dropin {
-  -webkit-animation: dropin 0.5s 1 ease-in forwards;
-  -moz-animation: dropin 0.5s 1 ease-in forwards;
-  -o-animation: dropin 0.5s 1 ease-in forwards;
-  animation: dropin 0.5s 1 ease-in forwards;
+  top: 50%;
 }
 
-/* line 444, alexkelsey.scss */
-#videoPlayer.fadeOut {
-  opacity: 0;
-}
-
-@-webkit-keyframes dropin {
-  /* line 449, alexkelsey.scss */
-  0 {
-    top: -300px;
-  }
-
-  /* line 450, alexkelsey.scss */
-  20% {
-    top: 44%;
-    -webkit-transform: rotate(15deg);
-  }
-
-  /* line 451, alexkelsey.scss */
-  34% {
-    top: 45%;
-  }
-
-  /* line 452, alexkelsey.scss */
-  48% {
-    top: 46%;
-    -webkit-transform: rotate(-10deg);
-  }
-
-  /* line 453, alexkelsey.scss */
-  58% {
-    top: 45%;
-  }
-
-  /* line 454, alexkelsey.scss */
-  68% {
-    top: 48%;
-    -webkit-transform: rotate(5deg);
-  }
-
-  /* line 455, alexkelsey.scss */
-  76% {
-    top: 47%;
-  }
-
-  /* line 456, alexkelsey.scss */
-  84% {
-    top: 48%;
-    -webkit-transform: rotate(-5deg);
-  }
-
-  /* line 457, alexkelsey.scss */
-  90% {
-    top: 50%;
-    -webkit-transform: rotate(0deg);
-  }
-
-  /* line 458, alexkelsey.scss */
-  100% {
-    top: 50%;
-  }
-}
-
-@-moz-keyframes dropin {
-  /* line 462, alexkelsey.scss */
-  0 {
-    top: -300px;
-  }
-
-  /* line 463, alexkelsey.scss */
-  20% {
-    top: 44%;
-    -moz-transform: rotate(15deg);
-  }
-
-  /* line 464, alexkelsey.scss */
-  34% {
-    top: 45%;
-  }
-
-  /* line 465, alexkelsey.scss */
-  48% {
-    top: 46%;
-    -moz-transform: rotate(-10deg);
-  }
-
-  /* line 466, alexkelsey.scss */
-  58% {
-    top: 45%;
-  }
-
-  /* line 467, alexkelsey.scss */
-  68% {
-    top: 48%;
-    -moz-transform: rotate(5deg);
-  }
-
-  /* line 468, alexkelsey.scss */
-  76% {
-    top: 47%;
-  }
-
-  /* line 469, alexkelsey.scss */
-  84% {
-    top: 48%;
-    -moz-transform: rotate(-5deg);
-  }
-
-  /* line 470, alexkelsey.scss */
-  90% {
-    top: 50%;
-    -moz-transform: rotate(0deg);
-  }
-
-  /* line 471, alexkelsey.scss */
-  100% {
-    top: 50%;
-  }
-}
-
-@-o-keyframes dropin {
-  /* line 475, alexkelsey.scss */
-  0 {
-    top: -300px;
-  }
-
-  /* line 476, alexkelsey.scss */
-  20% {
-    top: 44%;
-    -o-transform: rotate(15deg);
-  }
-
-  /* line 477, alexkelsey.scss */
-  34% {
-    top: 45%;
-  }
-
-  /* line 478, alexkelsey.scss */
-  48% {
-    top: 46%;
-    -o-transform: rotate(-10deg);
-  }
-
-  /* line 479, alexkelsey.scss */
-  58% {
-    top: 45%;
-  }
-
-  /* line 480, alexkelsey.scss */
-  68% {
-    top: 48%;
-    -o-transform: rotate(5deg);
-  }
-
-  /* line 481, alexkelsey.scss */
-  76% {
-    top: 47%;
-  }
-
-  /* line 482, alexkelsey.scss */
-  84% {
-    top: 48%;
-    -o-transform: rotate(-5deg);
-  }
-
-  /* line 483, alexkelsey.scss */
-  90% {
-    top: 50%;
-    -o-transform: rotate(0deg);
-  }
-
-  /* line 484, alexkelsey.scss */
-  100% {
-    top: 50%;
-  }
-}
-
-@keyframes dropin {
-  /* line 488, alexkelsey.scss */
-  0 {
-    top: -300px;
-  }
-
-  /* line 489, alexkelsey.scss */
-  20% {
-    top: 44%;
-    transform: rotate(15deg);
-  }
-
-  /* line 490, alexkelsey.scss */
-  34% {
-    top: 45%;
-  }
-
-  /* line 491, alexkelsey.scss */
-  48% {
-    top: 46%;
-    transform: rotate(-10deg);
-  }
-
-  /* line 492, alexkelsey.scss */
-  58% {
-    top: 45%;
-  }
-
-  /* line 493, alexkelsey.scss */
-  68% {
-    top: 48%;
-    transform: rotate(5deg);
-  }
-
-  /* line 494, alexkelsey.scss */
-  76% {
-    top: 47%;
-  }
-
-  /* line 495, alexkelsey.scss */
-  84% {
-    top: 48%;
-    transform: rotate(-5deg);
-  }
-
-  /* line 496, alexkelsey.scss */
-  90% {
-    top: 50%;
-    transform: rotate(0deg);
-  }
-
-  /* line 497, alexkelsey.scss */
-  100% {
-    top: 50%;
-  }
-}
-
-/* line 500, alexkelsey.scss */
 #videoClose {
   background-color: #171721;
   cursor: pointer;
@@ -685,162 +362,134 @@ li:hover .overlay i {
 
 /* Width Based */
 @media all and (max-width: 767px) {
-  /* line 517, alexkelsey.scss */
   #navigation {
     display: none;
   }
 
-  /* line 518, alexkelsey.scss */
   #mobileNavigation {
     display: block;
   }
 
-  /* line 519, alexkelsey.scss */
   #logo {
     width: 100%;
   }
 }
 @media all and (max-width: 549px) {
-  /* line 523, alexkelsey.scss */
   #navigation {
     display: none;
   }
 
-  /* line 524, alexkelsey.scss */
   #mobileNavigation {
     display: block;
   }
 
-  /* line 525, alexkelsey.scss */
   #logo {
     top: 25px;
   }
 
-  /* line 526, alexkelsey.scss */
   #mobileTab {
     top: 32px;
   }
 
-  /* line 527, alexkelsey.scss */
   #logo h1 {
     font-size: 40px;
     line-height: 65px;
   }
 }
 @media all and (max-width: 399px) {
-  /* line 534, alexkelsey.scss */
   #navigation {
     display: none;
   }
 
-  /* line 535, alexkelsey.scss */
   #mobileNavigation {
     display: block;
   }
 
-  /* line 536, alexkelsey.scss */
   #logo h1 {
     font-size: 28px;
     line-height: 65px;
   }
 }
 @media all and (max-width: 321px) {
-  /* line 543, alexkelsey.scss */
   #wrapper #scroller li {
     width: 320px;
   }
 }
 /* Height Based */
 @media all and (max-height: 550px) {
-  /* line 549, alexkelsey.scss */
   #logo {
     top: 25px;
   }
 
-  /* line 550, alexkelsey.scss */
   #mobileTab {
     top: 32px;
   }
 }
 @media all and (max-height: 500px) {
-  /* line 554, alexkelsey.scss */
   #scroller {
     top: auto;
     bottom: 10%;
   }
 }
 @media all and (max-height: 450px) {
-  /* line 558, alexkelsey.scss */
   #scroller {
     top: auto;
     bottom: 0%;
   }
 }
 @media all and (max-height: 400px) {
-  /* line 562, alexkelsey.scss */
   #scroller {
     top: auto;
     bottom: 0%;
   }
 
-  /* line 563, alexkelsey.scss */
   #logo {
     top: 5px;
   }
 
-  /* line 564, alexkelsey.scss */
   #mobileTab {
     top: 12px;
   }
 
-  /* line 565, alexkelsey.scss */
   #logo h1 {
     font-size: 28px;
     line-height: 65px;
   }
 }
 @media all and (max-height: 365px) {
-  /* line 572, alexkelsey.scss */
   #logo {
     top: 5px;
   }
 
-  /* line 573, alexkelsey.scss */
   #mobileTab {
     top: 12px;
   }
 
-  /* line 574, alexkelsey.scss */
   #logo h1 {
     font-size: 28px;
     line-height: 65px;
   }
 
-  /* line 578, alexkelsey.scss */
   #wrapper #scroller {
     bottom: 20%;
   }
 
-  /* line 581, alexkelsey.scss */
   #wrapper #scroller li {
     height: 200px;
     width: 170px;
   }
 
-  /* line 585, alexkelsey.scss */
   #wrapper #scroller li img {
     height: 200px;
     width: 167px;
   }
 
-  /* line 589, alexkelsey.scss */
   #scroller li .overlay {
     bottom: 20px;
     left: 50%;
   }
 }
 @media all and (max-height: 330px) {
-  /* line 596, alexkelsey.scss */
   #wrapper #scroller {
     bottom: 10%;
   }

@@ -34,10 +34,8 @@ function getPrefix(prop) {
 }
 
 var myScroll,
-    grid,
+    grid = document.getElementById('grid');
     transformPrefixed = getPrefix('transform');
-
-grid = document.getElementById('grid');
 
 window.onresize = function () {
     document.getElementsByTagName('body')[0].style.height = window.innerHeight + 'px';
@@ -49,7 +47,6 @@ window.onresize = function () {
     list.style.width = (listItems.length * listItemsWidth) + 'px';
 
     ak.width = window.innerWidth;
-
 };
 
 function hasClass (elem, className) {
@@ -57,7 +54,6 @@ function hasClass (elem, className) {
 };
 
 function loaded () {
-
     document.getElementsByTagName('body')[0].style.height = window.innerHeight + 'px';
 
     var list = document.getElementById('scroller'),
@@ -77,6 +73,7 @@ function loaded () {
     myScroll.on('scroll', function () {
         grid.style[transformPrefixed] = "rotateX(80deg) translate(" + this.x * 0.43 + "px, 0px)";
     });
+
     myScroll.on('scrollEnd', function () {
         grid.style[transformPrefixed] = "rotateX(80deg) translate(" + this.x * 0.43 + "px, 0px)";
         if (this.currentPage.pageX === 0) {
@@ -118,7 +115,7 @@ function addVideo (videoHref) {
 
     setTimeout(function () {
         videoContent.innerHTML = vimeoHTML;
-    }, 500);
+    }, 2000);
 }
 
 for (i = 0; i < videoLinks.length; i += 1) {
@@ -126,7 +123,7 @@ for (i = 0; i < videoLinks.length; i += 1) {
         if (ak.width > 620) {
             e.preventDefault();
             addVideo(this.href);
-            return false;    
+            return false;
         } else {
             window.location = this.href;
             return true;
@@ -137,7 +134,7 @@ for (i = 0; i < videoLinks.length; i += 1) {
         if (ak.width > 620) {
             e.preventDefault();
             addVideo(this.href);
-            return false;    
+            return false;
         } else {
             window.location = this.href;
             return true;
@@ -146,14 +143,10 @@ for (i = 0; i < videoLinks.length; i += 1) {
 }
 
 document.getElementById('videoClose').addEventListener('click', function (e) {
-
-    document.getElementById('videoPlayer').className = "dropin fadeOut";
-
+    document.getElementById('videoPlayer').className = '';
     setTimeout(function () {
-        document.getElementById('videoPlayer').className = "";
-        document.getElementById('videoContent').innerHTML = "";
-    }, 500);
-    
+        document.getElementById('videoContent').innerHTML = '';
+    }, 2000);
     return false;
 }, false);
 

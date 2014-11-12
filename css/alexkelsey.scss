@@ -1,14 +1,7 @@
 /* Colours */
-
 $background: #363640;
-
 $menu: #171721;
-
 $accent: #F22E9C;
-
-
-
-
 
 body {
 	background-color: $background;
@@ -17,12 +10,7 @@ body {
 	overflow: hidden;
 }
 
-
-
-
-
 /* Logo */
-
 #logo {
 	color: #FFF;
 	left: 0;
@@ -53,14 +41,8 @@ body {
 	max-height: 62px;
 }
 
-
-
-
-
 /* Navigation */
-
 #navigation {
-	background-color: $menu;
 	height: 75px;
 	overflow: hidden;
 	position: absolute;
@@ -93,10 +75,6 @@ body {
 #navigation a {
 	border-bottom: 6px solid #FFF;
 	height: 41px;
-
-	-webkit-transition: height 150ms ease-in-out;
-    -moz-transition: height 150ms ease-in-out;
-    -ms-transition: height 150ms ease-in-out;
     transition: height 150ms ease-in-out;
 }
 
@@ -136,12 +114,6 @@ body {
 	font-weight: 700;
 }
 
-
-
-
-
-
-
 #wrapper {
 	position: absolute;
 	width: 100%;
@@ -150,22 +122,7 @@ body {
 	overflow: hidden;
 	top: 0;
 	z-index: 3;
-
-	/* Prevent native touch events on Windows */
-	-ms-touch-action: none;
-
-	/* Prevent the callout on tap-hold and text selection */
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
 	user-select: none;
-
-	/* Prevent text resize on orientation change, useful for web-apps */
-	-webkit-text-size-adjust: none;
-	-moz-text-size-adjust: none;
-	-ms-text-size-adjust: none;
-	-o-text-size-adjust: none;
 	text-size-adjust: none;
 }
 
@@ -175,15 +132,7 @@ body {
 	padding: 0;
 	position: absolute;
 	top: 50%;
-
-	/* Prevent elements to be highlighted on tap */
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
-
-	/* Put the scroller into the HW Compositing layer right from the start */
-	-webkit-transform: translateZ(0);
-	-moz-transform: translateZ(0);
-	-ms-transform: translateZ(0);
-	-o-transform: translateZ(0);
 	transform: translateZ(0);
 }
 
@@ -202,29 +151,25 @@ body {
 	width: 250px;
 }
 
-
-
-
-
 /* Play video icons */
-
 .overlay {
 	background-color: transparent;
-	border: 3px solid rgba(0, 0, 0, 0.5);
+	border: 3px solid rgba(0, 0, 0, 0.9);
 	border-radius: 35px;
+	box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.4);
 	height: 64px;
-	right: 30px;
+	left: 50%;
 	line-height: 62px;
-	margin: 0 0 0 -35px;
+	margin: -32px 0 0 -32px;
 	position: absolute;
 	text-align: center;
-	bottom: 10px;
-	width: 63px;
+	top: 50%;
+	width: 64px;
 	z-index: 11;
 }
 
 .overlay span {
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: rgba(0, 0, 0, 0.9);
 	border: 5px solid #FFF;
 	border-radius: 64px;
 	display: block;
@@ -246,10 +191,6 @@ li:hover .overlay i {
 	color: $accent;
 }
 
-
-
-
-
 .scrollerNavigation {
 	background-color: transparent;
 	border: 3px solid rgba(0, 0, 0, 0.5);
@@ -262,13 +203,9 @@ li:hover .overlay i {
 	position: absolute;
 	text-align: center;
 	top: 50%;
+	transition: opacity 400ms ease-in-out;
 	width: 63px;
 	z-index: 10;
-
-	-webkit-transition: opacity 400ms ease-in-out;
-    -moz-transition: opacity 400ms ease-in-out;
-    -ms-transition: opacity 400ms ease-in-out;
-    transition: opacity 400ms ease-in-out;
 }
 
 .scrollerNavigation span {
@@ -302,13 +239,7 @@ li:hover .overlay i {
 #scrollerNext { right: 5px; }
 
 #horizon {
-	background: -moz-linear-gradient(top, $background 0%, $background 83%, transparent 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $background), color-stop(83%, $background), color-stop(100%, transparent));
-	background: -webkit-linear-gradient(top, $background 0%, $background 83%, transparent 100%);
-	background: -o-linear-gradient(top, $background 0%, $background 83%, transparent 100%);
-	background: -ms-linear-gradient(top, $background 0%, $background 83%, transparent 100%);
 	background: linear-gradient(to bottom, $background 0%, $background 83%, transparent 100%);
-
 	height: 60%;
 	position: absolute;
 	top: 0;
@@ -320,22 +251,10 @@ li:hover .overlay i {
 	background-color: $background;
 	background-image: -moz-linear-gradient(45deg, $accent 25%, transparent 25%), -moz-linear-gradient(-45deg, $accent 25%, transparent 25%), -moz-linear-gradient(45deg, transparent 75%, $accent 75%), -moz-linear-gradient(-45deg, transparent 75%, $accent 75%);
 	background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, #eb008a), color-stop(0.25, transparent)), -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.25, #eb008a), color-stop(0.25, transparent)), -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.75, transparent), color-stop(0.75, #eb008a)), -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.75, transparent), color-stop(0.75, #eb008a));
-	-moz-background-size: 80px 80px;
+
 	background-size: 80px 80px;
-	-webkit-background-size: 80px 80px;
-
-	-webkit-transform: rotateX(80deg) translate(0, 0);
-	-moz-transform: rotateX(80deg) translate(0, 0);
-	-ms-transform: rotateX(80deg) translate(0, 0);
-	-o-transform: rotateX(80deg) translate(0, 0);
 	transform: rotateX(80deg) translate(0, 0);
-
-	-webkit-transform-origin: top;
-	-moz-transform-origin: top;
-	-ms-transform-origin: top;
-	-o-transform-origin: top;
 	transform-origin: top;
-
 	background-position: 0 0, 40px 0, 40px -40px, 0px 40px;
 	height: 120%;
 	left: -2000px;
@@ -352,10 +271,6 @@ li:hover .overlay i {
 	top: 0;
 	width: 100%;
 	z-index: 1;
-
-	-webkit-perspective: 600px;
-	-moz-perspective: 600px;
-	-ms-perspective: 600px;
 	perspective: 600px;
 }
 
@@ -367,15 +282,7 @@ li:hover .overlay i {
 	top: 0;
 	width: 200px;
 	z-index: 21;
-
 	transform: translate(200px, 0);
-	-ms-transform: translate(200px, 0);
-	-webkit-transform: translate(200px, 0);
-	-moz-transform: translate(200px, 0);
-
-	-webkit-transition: -webkit-transform 500ms ease-in-out;
-    -moz-transition: -moz-transform 500ms ease-in-out;
-    -ms-transition: -ms-transform 500ms ease-in-out;
     transition: transform 500ms ease-in-out;
 }
 
@@ -425,76 +332,13 @@ li:hover .overlay i {
     padding: 10px;
 	position: absolute;
     top: -300px;
+    transition: top 2s ease-in-out;
     width: 576px;
     z-index: 4;
-
-    -webkit-transition: opacity 500ms ease-in-out;
-    -moz-transition: opacity 500ms ease-in-out;
-    -ms-transition: opacity 500ms ease-in-out;
-    transition: opacity 500ms ease-in-out;
 }
 
 #videoPlayer.dropin {
-	-webkit-animation: dropin 0.5s 1 ease-in forwards;
-	-moz-animation: dropin 0.5s 1 ease-in forwards;
-	-o-animation: dropin 0.5s 1 ease-in forwards;
-	animation: dropin 0.5s 1 ease-in forwards;
-}
-
-#videoPlayer.fadeOut {
-	opacity: 0;
-}
-
-@-webkit-keyframes dropin {
-	0    { top: -300px; }
-	20%  { top: 44%; -webkit-transform: rotate(15deg); }
-	34%  { top: 45%; }
-	48%  { top: 46%; -webkit-transform: rotate(-10deg); }
-	58%  { top: 45%; }
-	68%  { top: 48%; -webkit-transform: rotate(5deg); }
-	76%  { top: 47%; }
-	84%  { top: 48%; -webkit-transform: rotate(-5deg); }
-	90%  { top: 50%; -webkit-transform: rotate(0deg); }
-	100% { top: 50%; }
-}
-
-@-moz-keyframes dropin {
-	0    { top: -300px; }
-	20%  { top: 44%; -moz-transform: rotate(15deg); }
-	34%  { top: 45%; }
-	48%  { top: 46%; -moz-transform: rotate(-10deg); }
-	58%  { top: 45%; }
-	68%  { top: 48%; -moz-transform: rotate(5deg); }
-	76%  { top: 47%; }
-	84%  { top: 48%; -moz-transform: rotate(-5deg); }
-	90%  { top: 50%; -moz-transform: rotate(0deg); }
-	100% { top: 50%; }
-}
-
-@-o-keyframes dropin {
-	0    { top: -300px; }
-	20%  { top: 44%; -o-transform: rotate(15deg); }
-	34%  { top: 45%; }
-	48%  { top: 46%; -o-transform: rotate(-10deg); }
-	58%  { top: 45%; }
-	68%  { top: 48%; -o-transform: rotate(5deg); }
-	76%  { top: 47%; }
-	84%  { top: 48%; -o-transform: rotate(-5deg); }
-	90%  { top: 50%; -o-transform: rotate(0deg); }
-	100% { top: 50%; }
-}
-
-@keyframes dropin {
-	0    { top: -300px; }
-	20%  { top: 44%; transform: rotate(15deg); }
-	34%  { top: 45%; }
-	48%  { top: 46%; transform: rotate(-10deg); }
-	58%  { top: 45%; }
-	68%  { top: 48%; transform: rotate(5deg); }
-	76%  { top: 47%; }
-	84%  { top: 48%; transform: rotate(-5deg); }
-	90%  { top: 50%; transform: rotate(0deg); }
-	100% { top: 50%; }
+	top: 50%;
 }
 
 #videoClose {
@@ -507,12 +351,7 @@ li:hover .overlay i {
 	width: 50px;
 }
 
-
-
-
-
 /* Width Based */
-
 @media all and (max-width: 767px) {
 	#navigation { display: none; }
 	#mobileNavigation { display: block; }
@@ -544,7 +383,6 @@ li:hover .overlay i {
 }
 
 /* Height Based */
-
 @media all and (max-height: 550px) {
 	#logo { top: 25px; }
 	#mobileTab { top: 32px; }
@@ -584,7 +422,7 @@ li:hover .overlay i {
 	}
 	#wrapper #scroller li img {
 		height: 200px;
-		width: 167px; 
+		width: 167px;
 	}
 	#scroller li .overlay {
 		bottom: 20px;
