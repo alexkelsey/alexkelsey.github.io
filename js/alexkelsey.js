@@ -131,8 +131,9 @@ $('#videoClose').on('click', function() {
     return false;
 });
 
-$('#mobileMenuToggle').on('click tap', function() {
-    $('#mobileNavigation').toggleClass('mobileMenuOpen');
+/* Open and close the navigation */
+$('#menuToggle').on('click tap', function() {
+    $('#menu').toggleClass('open');
 });
 
 window.onresize();
