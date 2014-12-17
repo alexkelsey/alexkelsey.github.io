@@ -109,7 +109,7 @@ function addVideo (videoHref) {
     }, 2000);
 }
 
-$('#scroller a').on('click', function (e) {
+$('#scroller a').on('click tap', function (e) {
     var $this = $(this);
 
     if (ak.width > 620) {
