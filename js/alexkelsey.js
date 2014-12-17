@@ -91,11 +91,11 @@ document.addEventListener('touchmove', function (e) {
     e.preventDefault();
 }, false);
 
-$('#scrollerNext').on('click', function () {
+$('#scrollerNext').on('vclick', function () {
     myScroll.next(400, IScroll.utils.ease.quadratic);
 });
 
-$('#scrollerPrevious').on('click', function () {
+$('#scrollerPrevious').on('vclick', function () {
     myScroll.prev(400, IScroll.utils.ease.quadratic);
 });
 
@@ -109,7 +109,7 @@ function addVideo (videoHref) {
     }, 2000);
 }
 
-$('#scroller a').on('click', function (e) {
+$('#scroller a').on('vclick', function (e) {
     var $this = $(this);
 
     if (ak.width > 620) {
@@ -122,7 +122,7 @@ $('#scroller a').on('click', function (e) {
     }
 });
 
-$('#videoClose').on('click', function() {
+$('#videoClose').on('vclick', function() {
     $('#videoPlayer').attr('class', '');
     setTimeout(function () {
         $('#videoContent').html('');
@@ -131,7 +131,7 @@ $('#videoClose').on('click', function() {
 });
 
 /* Open and close the navigation */
-$('#menuToggle, #menuClose').on('click', function() {
+$('#menuToggle, #menuClose').on('vclick', function() {
     $('#menu, #menuClose').toggleClass('open');
 });
 
