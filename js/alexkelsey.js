@@ -132,8 +132,8 @@ $('#videoClose').on('click', function() {
 });
 
 /* Open and close the navigation */
-$('#menuToggle').on('click tap', function() {
-    $('#menu').toggleClass('open');
+$('#menuToggle, #menuClose').on('click tap', function() {
+    $('#menu, #menuClose').toggleClass('open');
 });
 
 window.onresize();

@@ -34,10 +34,6 @@ body {
   width: 70px;
 }
 
-#menu a:active {
-  color: #47a3da;
-}
-
 #menu .active,
 #menu .active:hover {
   border-bottom: 6px solid #F22E9C;
@@ -91,67 +87,6 @@ body {
   float: left;
   margin: 3px 0 0;
   max-height: 62px;
-}
-
-/* Navigation */
-#navigation {
-  height: 75px;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 40px;
-  width: 336px;
-  z-index: 4;
-}
-
-#navigation a {
-  color: #FFF;
-  display: block;
-  float: left;
-  font-family: 'Lato', sans-serif;
-  font-size: 20px;
-  font-weight: 300;
-  height: 35px;
-  line-height: 16px;
-  margin: 0 8px;
-  padding: 17px 8px;
-  text-decoration: none;
-  width: 80px;
-}
-
-#navigation a {
-  border-bottom: 6px solid #FFF;
-  height: 41px;
-  -webkit-transition: height 150ms ease-in-out;
-          transition: height 150ms ease-in-out;
-}
-
-#navigation a:hover {
-  height: 35px;
-}
-
-#mobileCenter {
-  left: 0;
-  margin: -80px 0 0;
-  position: absolute;
-  top: 50%;
-}
-
-#navigation .active,
-#navigation .active:hover {
-  border-bottom: 6px solid #F22E9C;
-  height: 35px;
-}
-
-#navigation a:hover {
-  border-bottom: 6px solid #FFF;
-}
-
-#navigation strong {
-  display: block;
-  font-family: 'Lato', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
 }
 
 #wrapper {
@@ -312,26 +247,7 @@ li:hover .overlay i {
           perspective: 600px;
 }
 
-#mobileTab {
-  background-color: #171721;
-  color: #FFF;
-  font-size: 28px;
-  height: 50px;
-  line-height: 50px;
-  position: absolute;
-  text-align: center;
-  top: 52px;
-  left: -50px;
-  width: 50px;
-}
-
-#mobileMenu {
-  background-color: #171721;
-  height: 100%;
-  width: 100%;
-}
-
-#mobileCaptureEvent {
+#menuClose {
   display: none;
   height: 100%;
   left: 0;
@@ -341,7 +257,7 @@ li:hover .overlay i {
   z-index: 20;
 }
 
-#mobileCaptureEvent.open {
+#menuClose.open {
   display: block;
 }
 
