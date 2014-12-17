@@ -131,7 +131,7 @@ $('#videoClose').on('click', function() {
     return false;
 });
 
-$('#mobileMenuToggle').on('click', function() {
+$('#mobileMenuToggle').on('click tap', function() {
     $('#mobileNavigation').toggleClass('mobileMenuOpen');
 });
 
