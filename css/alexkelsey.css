@@ -58,6 +58,20 @@ body {
   width: 70px;
 }
 
+#menuClose {
+  display: none;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+}
+
+#menuClose.open {
+  display: block;
+}
+
 /* Logo */
 #logo {
   color: #FFF;
@@ -247,20 +261,6 @@ li:hover .overlay i {
           perspective: 600px;
 }
 
-#menuClose {
-  display: none;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 20;
-}
-
-#menuClose.open {
-  display: block;
-}
-
 #videoPlayer {
   background-color: #171721;
   display: block;
@@ -292,25 +292,13 @@ li:hover .overlay i {
 
 /* Width Based */
 @media all and (max-width: 767px) {
-  #navigation {
-    display: none;
-  }
-
   #logo {
     width: 100%;
   }
 }
 @media all and (max-width: 549px) {
-  #navigation {
-    display: none;
-  }
-
   #logo {
     top: 25px;
-  }
-
-  #mobileTab {
-    top: 32px;
   }
 
   #logo h1 {
@@ -319,10 +307,6 @@ li:hover .overlay i {
   }
 }
 @media all and (max-width: 399px) {
-  #navigation {
-    display: none;
-  }
-
   #logo h1 {
     font-size: 28px;
     line-height: 65px;
@@ -337,10 +321,6 @@ li:hover .overlay i {
 @media all and (max-height: 550px) {
   #logo {
     top: 25px;
-  }
-
-  #mobileTab {
-    top: 32px;
   }
 }
 @media all and (max-height: 500px) {
@@ -365,10 +345,6 @@ li:hover .overlay i {
     top: 5px;
   }
 
-  #mobileTab {
-    top: 12px;
-  }
-
   #logo h1 {
     font-size: 28px;
     line-height: 65px;
@@ -377,10 +353,6 @@ li:hover .overlay i {
 @media all and (max-height: 365px) {
   #logo {
     top: 5px;
-  }
-
-  #mobileTab {
-    top: 12px;
   }
 
   #logo h1 {
