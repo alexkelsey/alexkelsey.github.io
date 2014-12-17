@@ -38,29 +38,25 @@ var myScroll,
     transformPrefixed = getPrefix('transform');
 
 window.onresize = function () {
-    document.getElementsByTagName('body')[0].style.height = window.innerHeight + 'px';
+    $('body').css({'height': window.innerHeight + 'px'});
 
-    var list = document.getElementById('scroller'),
-        listItems = list.getElementsByTagName('li'),
-        listItemsWidth = listItems[0].offsetWidth;
+    var $list = $('#scroller'),
+        $listItems = $list.find('li'),
+        listItemsWidth = $listItems[0].offsetWidth;
 
-    list.style.width = (listItems.length * listItemsWidth) + 'px';
+    $list.css({'width': ($listItems.length * listItemsWidth) + 'px'});
 
     ak.width = window.innerWidth;
 };
 
-function hasClass (elem, className) {
-    return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
-};
+$(function () {
+    $('body').css({'height': window.innerHeight + 'px'});
 
-function loaded () {
-    document.getElementsByTagName('body')[0].style.height = window.innerHeight + 'px';
+    var $list = $('#scroller'),
+        $listItems = $list.find('li'),
+        listItemsWidth = $listItems[0].offsetWidth;
 
-    var list = document.getElementById('scroller'),
-        listItems = list.getElementsByTagName('li'),
-        listItemsWidth = listItems[0].offsetWidth;
-
-    list.style.width = (listItems.length * listItemsWidth) + 'px';
+    $list.css({'width': ($listItems.length * listItemsWidth) + 'px'});
 
     myScroll = new IScroll('#wrapper', {
         probeType: 3,
@@ -89,72 +85,54 @@ function loaded () {
     });
 
     ak.width = window.innerWidth;
-}
+});
 
 document.addEventListener('touchmove', function (e) {
     e.preventDefault();
 }, false);
 
-document.getElementById('scrollerNext').addEventListener('tap', function (e) {
+$('#scrollerNext').on('click', function () {
     myScroll.next(400, IScroll.utils.ease.quadratic);
-}, false);
-
-document.getElementById('scrollerPrevious').addEventListener('tap', function (e) {
-    myScroll.prev(400, IScroll.utils.ease.quadratic);
-}, false);
-
-var videoLinks = document.querySelectorAll('#scroller a'),
-    i;
-
-function addVideo (videoHref) {
-    var vimeoHTML = '<iframe src="' + videoHref + '?api=1&amp;player_id=player&amp;autoplay=1&amp;badge=0&amp;byline=0&amp;color=F22E9C&amp;portrait=0&amp;title=0" width="576" height="315" frameborder="0" webkitallowfullscreen allowfullscreen></iframe>',
-        videoPlayer = document.getElementById('videoPlayer'),
-        videoContent = document.getElementById('videoContent');
-
-    videoPlayer.className = "dropin";
-
-    setTimeout(function () {
-        videoContent.innerHTML = vimeoHTML;
-    }, 2000);
-}
-
-for (i = 0; i < videoLinks.length; i += 1) {
-    videoLinks[i].addEventListener('tap', function (e) {
-        if (ak.width > 620) {
-            e.preventDefault();
-            addVideo(this.href);
-            return false;
-        } else {
-            window.location = this.href;
-            return true;
-        }
-    }, false);
-
-    videoLinks[i].addEventListener('click', function (e) {
-        if (ak.width > 620) {
-            e.preventDefault();
-            addVideo(this.href);
-            return false;
-        } else {
-            window.location = this.href;
-            return true;
-        }
-    }, false);
-}
-
-document.getElementById('videoClose').addEventListener('click', function (e) {
-    document.getElementById('videoPlayer').className = '';
-    setTimeout(function () {
-        document.getElementById('videoContent').innerHTML = '';
-    }, 2000);
-    return false;
-}, false);
-
-
-$('#mobileMenuToggle').on('click', function() {
-    $('#mobileNavigation').toggleClass('cbp-spmenu-open');
 });
 
+$('#scrollerPrevious').on('click', function () {
+    myScroll.prev(400, IScroll.utils.ease.quadratic);
+});
 
+function addVideo (videoHref) {
+    var vimeoHTML = '<iframe src="' + videoHref + '?api=1&amp;player_id=player&amp;autoplay=1&amp;badge=0&amp;byline=0&amp;color=F22E9C&amp;portrait=0&amp;title=0" width="576" height="315" frameborder="0" webkitallowfullscreen allowfullscreen></iframe>';
+
+    $('#videoPlayer').addClass('dropin');
+
+    setTimeout(function () {
+        $('#videoContent').html(vimeoHTML);
+    }, 2000);
+}
+
+$('#scroller a').on('click', function (e) {
+    var $this = $(this);
+
+    if (ak.width > 620) {
+        e.preventDefault();
+        addVideo($this.attr('href'));
+        return false;
+
+    } else {
+        window.location = $this.attr('href');
+        return true;
+    }
+});
+
+$('#videoClose').on('click', function() {
+    $('#videoPlayer').attr('class', '');
+    setTimeout(function () {
+        $('#videoContent').html('');
+    }, 2000);
+    return false;
+});
+
+$('#mobileMenuToggle').on('click', function() {
+    $('#mobileNavigation').toggleClass('mobileMenuOpen');
+});
 
 window.onresize();

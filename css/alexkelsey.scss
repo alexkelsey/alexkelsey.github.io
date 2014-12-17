@@ -3,20 +3,28 @@ $background: #363640;
 $menu: #171721;
 $accent: #F22E9C;
 
-
-
-
-.cbp-spmenu {
+/* Mobile Menu */
+.mobileMenu {
     background: $menu;
     position: fixed;
+    width: 160px;
+    height: 100%;
+    top: 0;
+    z-index: 1000;
+    right: -160px;
+    transition: all 0.3s ease;
 }
 
-.cbp-spmenu a {
+.mobileMenu.mobileMenuOpen {
+    right: 0;
+}
+
+.mobileMenu a {
     display: block;
     color: #FFF;
 }
 
-.cbp-spmenu a:active {
+.mobileMenu a:active {
     background: #afdefa;
     color: #47a3da;
 }
@@ -51,63 +59,6 @@ $accent: #F22E9C;
 #mobileNavigation strong {
 	font-weight: 700;
 	font-size: 14px;
-}
-
-.cbp-spmenu-vertical {
-    width: 160px;
-    height: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-.cbp-spmenu-right {
-    right: -160px;
-}
-
-.cbp-spmenu-right.cbp-spmenu-open {
-    right: 0;
-}
-
-.cbp-spmenu {
-    transition: all 0.3s ease;
-}
-
-@media screen and (max-width: 55.1875em){
-
-    .cbp-spmenu-horizontal {
-        font-size: 75%;
-        height: 110px;
-    }
-
-    .cbp-spmenu-top {
-        top: -110px;
-    }
-
-    .cbp-spmenu-bottom {
-        bottom: -110px;
-    }
-
-}
-
-@media screen and (max-height: 26.375em){
-
-    .cbp-spmenu-vertical {
-        font-size: 90%;
-        width: 190px;
-    }
-
-    .cbp-spmenu-left,
-    .cbp-spmenu-push-toleft {
-        left: -190px;
-    }
-
-    .cbp-spmenu-right {
-        right: -190px;
-    }
-
-    .cbp-spmenu-push-toright {
-        left: 190px;
-    }
 }
 
 
