@@ -91,11 +91,11 @@ document.addEventListener('touchmove', function (e) {
     e.preventDefault();
 }, false);
 
-$('#scrollerNext').on('click', function () {
+$('#scrollerNext').on('click tap', function () {
     myScroll.next(400, IScroll.utils.ease.quadratic);
 });
 
-$('#scrollerPrevious').on('click', function () {
+$('#scrollerPrevious').on('click tap', function () {
     myScroll.prev(400, IScroll.utils.ease.quadratic);
 });
 
