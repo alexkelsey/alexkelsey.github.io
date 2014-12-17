@@ -38,8 +38,14 @@
   width: 70px;
 }
 
-#mobileNavigation i {
-  font-size: 24px;
+#mobileNavigation a {
+  display: block;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  margin: 20px 45px;
+  padding: 0 0 10px;
+  text-decoration: none;
+  width: 70px;
 }
 
 #mobileNavigation .active,
@@ -50,6 +56,10 @@
 #mobileNavigation strong {
   font-weight: 700;
   font-size: 14px;
+}
+
+#mobileMenuToggle i {
+  font-size: 24px;
 }
 
 body {
