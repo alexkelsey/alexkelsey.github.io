@@ -150,23 +150,11 @@ document.getElementById('videoClose').addEventListener('click', function (e) {
     return false;
 }, false);
 
-document.getElementById('mobileTab').addEventListener('click', function (e) {
-    var mobileNavigation = document.getElementById('mobileNavigation'),
-        mobileCaptureEvent = document.getElementById('mobileCaptureEvent');
 
-    if (hasClass(mobileNavigation, "open")) {
-        mobileNavigation.className = "";
-        mobileCaptureEvent.className = "";
+$('#mobileMenuToggle').on('click', function() {
+    $('#mobileNavigation').toggleClass('cbp-spmenu-open');
+});
 
-    } else {
-        mobileNavigation.className = "open";
-        mobileCaptureEvent.className = "open";
-    }
-}, false);
 
-document.getElementById('mobileCaptureEvent').addEventListener('click', function (e) {
-    document.getElementById('mobileNavigation').className = "";
-    document.getElementById('mobileCaptureEvent').className = "";
-}, false);
 
 window.onresize();

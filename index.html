@@ -13,11 +13,11 @@
 
 	<link rel="shortcut icon" href="favicon.ico">
 	<link media="all" rel="stylesheet" type="text/css" href="css/alexkelsey.css" />
-	<link media="all" rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
+	<link media="all" rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
 
 </head>
 
-<body onload="loaded()">
+<body class="cbp-spmenu-push" onload="loaded()">
 
 	<div id="logo">
 		<h1><em>Alex</em> Kelsey</h1>
@@ -37,7 +37,7 @@
 				<!-- Default -->
 				<a href="http://player.vimeo.com/video/82940482">
 		            <img src="img/nerd.png">
-		            <div class="overlay"><span><i class="fa fa-play"></i></span></div>
+		            <div class="overlay"><span><i class="icon-play"></i></span></div>
 		        </a>
 			</li>
 
@@ -45,7 +45,7 @@
 				<!-- Run -->
 				<a href="http://player.vimeo.com/video/82457522">
 		            <img src="img/nerd_run.png">
-		            <div class="overlay"><span><i class="fa fa-play"></i></span></div>
+		            <div class="overlay"><span><i class="icon-play"></i></span></div>
 		        </a>
 			</li>
 
@@ -53,7 +53,7 @@
 				<!-- Computer -->
 				<a href="http://player.vimeo.com/video/82457521">
 		            <img src="img/nerd_computer.png">
-		            <div class="overlay"><span><i class="fa fa-play"></i></span></div>
+		            <div class="overlay"><span><i class="icon-play"></i></span></div>
 		        </a>
 			</li>
 
@@ -61,7 +61,7 @@
 				<!-- Guitar -->
 				<a href="http://player.vimeo.com/video/82940482">
 		            <img src="img/nerd_guitar.png">
-		            <div class="overlay"><span><i class="fa fa-play"></i></span></div>
+		            <div class="overlay"><span><i class="icon-play"></i></span></div>
 		        </a>
 			</li>
 
@@ -69,7 +69,7 @@
 				<!-- Walk -->
 				<a href="http://player.vimeo.com/video/82457520">
 		            <img src="img/nerd_walk.png">
-		            <div class="overlay"><span><i class="fa fa-play"></i></span></div>
+		            <div class="overlay"><span><i class="icon-play"></i></span></div>
 		        </a>
 			</li>
 
@@ -77,7 +77,7 @@
 				<!-- Default -->
 				<a href="http://player.vimeo.com/video/82940482">
 		            <img src="img/nerd.png">
-		            <div class="overlay"><span><i class="fa fa-play"></i></span></div>
+		            <div class="overlay"><span><i class="icon-play"></i></span></div>
 		        </a>
 			</li>
 
@@ -85,7 +85,7 @@
 				<!-- Run -->
 				<a href="http://player.vimeo.com/video/82457522">
 		            <img src="img/nerd_run.png">
-		            <div class="overlay"><span><i class="fa fa-play"></i></span></div>
+		            <div class="overlay"><span><i class="icon-play"></i></span></div>
 		        </a>
 			</li>
 
@@ -93,7 +93,7 @@
 				<!-- Computer -->
 				<a href="http://player.vimeo.com/video/82457521">
 		            <img src="img/nerd_computer.png">
-		            <div class="overlay"><span><i class="fa fa-play"></i></span></div>
+		            <div class="overlay"><span><i class="icon-play"></i></span></div>
 		        </a>
 			</li>
 
@@ -101,7 +101,7 @@
 				<!-- Guitar -->
 				<a href="http://player.vimeo.com/video/82940482">
 		            <img src="img/nerd_guitar.png">
-		            <div class="overlay"><span><i class="fa fa-play"></i></span></div>
+		            <div class="overlay"><span><i class="icon-play"></i></span></div>
 		        </a>
 			</li>
 
@@ -109,13 +109,13 @@
 				<!-- Walk -->
 				<a href="http://player.vimeo.com/video/82457520">
 		            <img src="img/nerd_walk.png">
-		            <div class="overlay"><span><i class="fa fa-play"></i></span></div>
+		            <div class="overlay"><span><i class="icon-play"></i></span></div>
 		        </a>
 			</li>
 		</ul>
 
-		<div id="scrollerPrevious" class="scrollerNavigation disabled"><span><i class="fa fa-arrow-left"></i></span></div>
-		<div id="scrollerNext" class="scrollerNavigation"><span><i class="fa fa-arrow-right"></i></span></div>
+		<div id="scrollerPrevious" class="scrollerNavigation disabled"><i class="icon-arrow-left"></i></div>
+		<div id="scrollerNext" class="scrollerNavigation"><i class="icon-arrow-right"></i></div>
 
 	</div>
 
@@ -133,18 +133,16 @@
 
 	<div id="mobileCaptureEvent"></div>
 
-	<div id="mobileNavigation">
-		<div id="mobileTab"></div>
-
-		<div id="mobileMenu">
-			<div id="mobileCenter">
-				<a href="#" class="active"><strong>Animation</strong> Showreel</a>
-				<a href="#"><strong>UX</strong> Design</a>
-				<a href="#"><strong>Download</strong> CV</a>
-			</div>
+	<nav class="cbp-spmenu-open cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="mobileNavigation">
+		<div class="mobileMenuIcon" id="mobileMenuToggle"><i class="icon-plus"></i></div>
+	    <div id="mobileCenter">
+	    	<a href="#" class="active"><strong>Animation</strong> Showreel</a>
+			<!-- a href="#"><strong>UX</strong> Design</a -->
+			<a href="#"><strong>Download</strong> CV</a>
 		</div>
-	</div>
+	</nav>
 
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script type="text/javascript" src="js/iscroll-probe.js"></script>
 	<script type="text/javascript" src="js/alexkelsey.js"></script>
 	<script type="text/javascript" src="js/modernizr.custom.js"></script>
