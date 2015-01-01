@@ -10,6 +10,10 @@ body {
 #band {
   background-color: #171721;
   height: 70px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: 3;
 }
 
 /* Menu */
