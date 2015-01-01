@@ -6,6 +6,12 @@ body {
   overflow: hidden;
 }
 
+/* Band */
+#band {
+  background-color: #171721;
+  height: 70px;
+}
+
 /* Menu */
 #menu {
   background: #171721;
