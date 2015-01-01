@@ -1,0 +1,10 @@
+{% for animation in site.data.animations %}
+
+	<li>
+		<a href="{{ animation.href }}">
+			<img src="img/{{ animation.image }}">
+			<div class="overlay"><span><i class="fa fa-play"></i></span></div>
+		</a>
+	</li>
+
+{% endfor %}

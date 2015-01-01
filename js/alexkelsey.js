@@ -87,10 +87,12 @@ $(function () {
     ak.width = window.innerWidth;
 });
 
+
 document.addEventListener('touchmove', function (e) {
     e.preventDefault();
 }, false);
 
+/* Navigation previous and next icons */
 $('#scrollerNext').on('vclick', function () {
     myScroll.next(400, IScroll.utils.ease.quadratic);
 });
@@ -99,16 +101,15 @@ $('#scrollerPrevious').on('vclick', function () {
     myScroll.prev(400, IScroll.utils.ease.quadratic);
 });
 
+/* Add video into the page */
 function addVideo (videoHref) {
-    var vimeoHTML = '<iframe src="' + videoHref + '?api=1&amp;player_id=player&amp;autoplay=1&amp;badge=0&amp;byline=0&amp;color=F22E9C&amp;portrait=0&amp;title=0" width="576" height="315" frameborder="0" webkitallowfullscreen allowfullscreen></iframe>';
-
     $('#videoPlayer').addClass('dropin');
-
     setTimeout(function () {
-        $('#videoContent').html(vimeoHTML);
+        $('#videoContent').html('<iframe src="' + videoHref + '?api=1&amp;player_id=player&amp;autoplay=1&amp;badge=0&amp;byline=0&amp;color=F22E9C&amp;portrait=0&amp;title=0" width="576" height="315" frameborder="0" webkitallowfullscreen allowfullscreen></iframe>');
     }, 2000);
 }
 
+/* How to open the video */
 $('#scroller a').on('vclick', function (e) {
     var $this = $(this);
 
@@ -122,6 +123,7 @@ $('#scroller a').on('vclick', function (e) {
     }
 });
 
+/* Animate closing of videos */
 $('#videoClose').on('vclick', function() {
     $('#videoPlayer').attr('class', '');
     setTimeout(function () {
