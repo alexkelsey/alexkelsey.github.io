@@ -13,9 +13,35 @@ body {
 /* Band */
 #band {
 	background-color: $menu;
+	color: #FFF;
 	height: 70px;
-
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 3;
 }
+
+#band h1 {
+	float: left;
+	font-family: 'Lato', sans-serif;
+	font-size: 52px;
+	font-weight: 100;
+	margin: 0 0 0 20px;
+	text-transform: uppercase;
+}
+
+#band em {
+	color: $accent;
+	font-style: normal;
+}
+
+#band img {
+	float: left;
+	margin: 3px 0 0;
+	max-height: 62px;
+}
+
+
 
 /* Menu */
 #menu {
@@ -79,37 +105,6 @@ body {
 }
 
 #menuClose.open { display: block; }
-
-/* Logo */
-#logo {
-	color: #FFF;
-	left: 0;
-	padding: 0;
-	position: absolute;
-	top: 45px;
-	width: 55%;
-	z-index: 3;
-}
-
-#logo h1 {
-	float: left;
-	font-family: 'Lato', sans-serif;
-	font-size: 52px;
-	font-weight: 100;
-	margin: 0 0 0 20px;
-	text-transform: uppercase;
-}
-
-#logo em {
-	color: $accent;
-	font-style: normal;
-}
-
-#logo img {
-	float: left;
-	margin: 3px 0 0;
-	max-height: 62px;
-}
 
 #wrapper {
 	position: absolute;
