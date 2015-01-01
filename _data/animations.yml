@@ -1,5 +1,14 @@
-- href: href1
-  image: image1
+- href: http://player.vimeo.com/video/82940482
+  image: nerd.png
 
-- href: href2
-  image: image2
+- href: http://player.vimeo.com/video/82457522
+  image: nerd_run.png
+
+- href: http://player.vimeo.com/video/82457521
+  image: nerd_computer.png
+
+- href: http://player.vimeo.com/video/82940482
+  image: nerd_guitar.png
+
+- href: http://player.vimeo.com/video/82457520
+  image: nerd_walk.png
