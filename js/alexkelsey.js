@@ -2,7 +2,7 @@ var ak = window.ak || {};
 
 WebFontConfig = {
     google: {
-        families: ['Lato:700:latin', 'Lato:300:latin', 'Lato:100:latin']
+        families: ['Lato:300:latin', 'Lato:100:latin']
     }
 };
 
