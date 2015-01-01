@@ -1,18 +1,14 @@
 var ak = window.ak || {};
 
-WebFontConfig = {
-    google: {
-        families: ['Lato:300:latin', 'Lato:100:latin']
-    }
-};
+WebFontConfig = {'google':{'families':['Lato:300:latin', 'Lato:100:latin']}};
 
 (function() {
-    var wf = document.createElement('script');
-    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-    wf.type = 'text/javascript';
-    wf.async = 'true';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(wf, s);
+var f = document.createElement('script');
+f.src = 'http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+f.type = 'text/javascript';
+f.async = 'true';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(f, s);
 })();
 
 function getPrefix(prop) {
