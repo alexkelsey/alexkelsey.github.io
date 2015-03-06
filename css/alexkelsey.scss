@@ -93,7 +93,7 @@ body {
 		position: absolute;
 		left:0;
 		content: '';
-		transform-origin: $button-size/14 center;
+		transform-origin: center center;
 	}
 
 	&:before { top: $button-size/4; }

@@ -84,9 +84,9 @@ body {
   position: absolute;
   left: 0;
   content: '';
-  -webkit-transform-origin: 2.5px center;
-      -ms-transform-origin: 2.5px center;
-          transform-origin: 2.5px center;
+  -webkit-transform-origin: center center;
+      -ms-transform-origin: center center;
+          transform-origin: center center;
 }
 .lines:before {
   top: 8.75px;
