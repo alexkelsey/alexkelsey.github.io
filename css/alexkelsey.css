@@ -101,14 +101,13 @@ body {
 }
 
 .lines-button.x2.close .lines {
-  /*hide the middle line*/
-  background: transparent
-  /*overlay the lines by setting both their top values to 0*/
+  -webkit-transition: background .3s 0s ease;
+          transition: background .3s 0s ease;
+  background: transparent;
 }
 .lines-button.x2.close .lines:before, .lines-button.x2.close .lines:after {
-  -webkit-transform-origin: 50% 50%;
-      -ms-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
+  -webkit-transition: top .3s ease, -webkit-transform .3s .5s ease;
+          transition: top .3s ease, transform .3s .5s ease;
   top: 0;
   width: 3.5rem;
 }

@@ -102,24 +102,22 @@ body {
 	&:after { top: -$button-size/4; }
 }
 
+
 .lines-button.x2.close .lines{
 
-    /*hide the middle line*/
+    transition: background .3s 0s ease;
     background: transparent;
 
-    /*overlay the lines by setting both their top values to 0*/
     &:before, &:after{
-		transform-origin: 50% 50%;
-		top: 0;
-		width: $button-size;
+      transition: top .3s ease, transform .3s .5s ease;
+      top:0;
+      width: $button-size;
     }
-
-    // rotate the lines to form the x shape
     &:before{
-		transform: rotate3d(0,0,1,45deg);
+      transform: rotate3d(0,0,1,45deg);
     }
     &:after{
-		transform: rotate3d(0,0,1,-45deg);
+      transform: rotate3d(0,0,1,-45deg);
     }
 }
 
