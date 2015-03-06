@@ -109,8 +109,8 @@ body {
 }
 
 .lines-button.x2.close .lines {
-  -webkit-transition: background 150ms 0s ease;
-          transition: background 150ms 0s ease;
+  -webkit-transition: background 300ms 0s ease;
+          transition: background 300ms 0s ease;
   background: transparent;
 }
 .lines-button.x2.close .lines:before, .lines-button.x2.close .lines:after {
