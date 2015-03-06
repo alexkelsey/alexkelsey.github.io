@@ -68,11 +68,9 @@ body {
 
 .lines-button {
   display: inline-block;
-  padding: $button-size/2 $button-size/4;
-  transition: .3s;
+  transition: 300ms;
   cursor: pointer;
   user-select: none;
-  border-radius: $button-size/7;
 
   &:hover {
     opacity: 1;

@@ -49,15 +49,13 @@ body {
 
 .lines-button {
   display: inline-block;
-  padding: 1.75rem 0.875rem;
-  -webkit-transition: .3s;
-          transition: .3s;
+  -webkit-transition: 300ms;
+          transition: 300ms;
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  border-radius: 0.5rem;
 }
 .lines-button:hover {
   opacity: 1;
