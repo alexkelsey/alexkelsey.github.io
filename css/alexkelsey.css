@@ -52,10 +52,6 @@ body {
   -webkit-transition: 300ms;
           transition: 300ms;
   cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 .lines-button:hover {
   opacity: 1;
