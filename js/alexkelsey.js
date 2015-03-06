@@ -129,7 +129,7 @@ $('#videoClose').on('vclick', function() {
 });
 
 /* Open and close the navigation */
-$('#menuToggle').on('vclick', function() {
+$('#menuToggle').on('click', function() {
     $('#menu').toggleClass('open');
     $('#menuToggleIcon').toggleClass('close');
 });
