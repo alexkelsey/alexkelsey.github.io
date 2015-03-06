@@ -69,8 +69,8 @@ body {
   height: 4px;
   background: #FFF;
   border-radius: 2px;
-  -webkit-transition: 300ms;
-          transition: 300ms;
+  -webkit-transition: 200ms;
+          transition: 200ms;
   position: relative;
   top: -4px;
 }
@@ -80,8 +80,8 @@ body {
   height: 4px;
   background: #FFF;
   border-radius: 2px;
-  -webkit-transition: 300ms;
-          transition: 300ms;
+  -webkit-transition: 200ms;
+          transition: 200ms;
   position: absolute;
   left: 0;
   content: '';
