@@ -59,7 +59,7 @@ body {
   width: 160px;
   height: 100%;
   top: 0;
-  z-index: 1000;
+  z-index: 3;
   right: -160px;
   -webkit-transition: all 0.3s ease;
           transition: all 0.3s ease;
