@@ -66,9 +66,9 @@ body {
 .lines {
   display: inline-block;
   width: 35px;
-  height: 4.375px;
+  height: 4px;
   background: #FFF;
-  border-radius: 2.5px;
+  border-radius: 2px;
   -webkit-transition: 0.3s;
           transition: 0.3s;
   position: relative;
@@ -76,9 +76,9 @@ body {
 .lines:before, .lines:after {
   display: inline-block;
   width: 35px;
-  height: 4.375px;
+  height: 4px;
   background: #FFF;
-  border-radius: 2.5px;
+  border-radius: 2px;
   -webkit-transition: 0.3s;
           transition: 0.3s;
   position: absolute;
