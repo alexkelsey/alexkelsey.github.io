@@ -65,34 +65,34 @@ body {
 
 .lines {
   display: inline-block;
-  width: 70px;
-  height: 10px;
+  width: 50px;
+  height: 7.14286px;
   background: #FFF;
-  border-radius: 5px;
+  border-radius: 3.57143px;
   -webkit-transition: 0.3s;
           transition: 0.3s;
   position: relative;
 }
 .lines:before, .lines:after {
   display: inline-block;
-  width: 70px;
-  height: 10px;
+  width: 50px;
+  height: 7.14286px;
   background: #FFF;
-  border-radius: 5px;
+  border-radius: 3.57143px;
   -webkit-transition: 0.3s;
           transition: 0.3s;
   position: absolute;
   left: 0;
   content: '';
-  -webkit-transform-origin: 5px center;
-      -ms-transform-origin: 5px center;
-          transform-origin: 5px center;
+  -webkit-transform-origin: 3.57143px center;
+      -ms-transform-origin: 3.57143px center;
+          transform-origin: 3.57143px center;
 }
 .lines:before {
-  top: 17.5px;
+  top: 12.5px;
 }
 .lines:after {
-  top: -17.5px;
+  top: -12.5px;
 }
 
 .lines-button.x2.close .lines {
@@ -104,7 +104,7 @@ body {
   -webkit-transition: top .3s ease, -webkit-transform .3s .5s ease;
           transition: top .3s ease, transform .3s .5s ease;
   top: 0;
-  width: 70px;
+  width: 50px;
 }
 .lines-button.x2.close .lines:before {
   -webkit-transform: rotate3d(0, 0, 1, 45deg);
