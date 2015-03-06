@@ -120,18 +120,6 @@ body {
           transform: rotate3d(0, 0, 1, -45deg);
 }
 
-.lines-button.x2 .lines {
-  -webkit-transition: background .3s .6s ease;
-          transition: background .3s .6s ease;
-}
-.lines-button.x2 .lines:before, .lines-button.x2 .lines:after {
-  -webkit-transform-origin: 50% 50%;
-      -ms-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  -webkit-transition: top .3s .6s ease, -webkit-transform .3s ease;
-          transition: top .3s .6s ease, transform .3s ease;
-}
-
 /* Menu */
 #menu {
   background: #171721;
