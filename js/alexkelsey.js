@@ -129,8 +129,8 @@ $('#videoClose').on('vclick', function() {
 });
 
 /* Open and close the navigation */
-$('#menuToggle, #menuClose').on('vclick', function() {
-    $('#menu, #menuClose').toggleClass('open');
+$('#menuToggle').on('vclick', function() {
+    $('#menu').toggleClass('open');
     $('#menuToggleIcon').toggleClass('close');
 });
 
