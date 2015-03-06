@@ -107,7 +107,7 @@ body {
     &:before, &:after{
       //set transform origin back to center
       transform-origin: 50% 50%;
-      transition: top .0s .3s ease-in, transform .2s ease-out;
+      transition: top .2s .3s ease-in, transform .2s ease-out;
     }
 }
 
