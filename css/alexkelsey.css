@@ -63,6 +63,38 @@ body {
   background: rgba(0, 0, 0, 0.1);
 }
 
+.lines {
+  display: inline-block;
+  width: 35px;
+  height: 4px;
+  background: #FFF;
+  border-radius: 2px;
+  -webkit-transition: 0.3s;
+          transition: 0.3s;
+  position: relative;
+}
+.lines:before, .lines:after {
+  display: inline-block;
+  width: 35px;
+  height: 4px;
+  background: #FFF;
+  border-radius: 2px;
+  -webkit-transition: 0.3s;
+          transition: 0.3s;
+  position: absolute;
+  left: 0;
+  content: '';
+  -webkit-transform-origin: center center;
+      -ms-transform-origin: center center;
+          transform-origin: center center;
+}
+.lines:before {
+  top: 8.75px;
+}
+.lines:after {
+  top: -8.75px;
+}
+
 .lines-button.x2 .lines {
   -webkit-transition: background .3s .6s ease;
           transition: background .3s .6s ease;

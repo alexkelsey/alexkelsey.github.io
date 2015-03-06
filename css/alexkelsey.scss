@@ -82,6 +82,24 @@ body {
   }
 }
 
+.lines {
+
+	@include line;
+	position: relative;
+
+	&:before, &:after {
+
+		@include line;
+		position: absolute;
+		left:0;
+		content: '';
+		transform-origin: center center;
+	}
+
+	&:before { top: $button-size/4; }
+	&:after { top: -$button-size/4; }
+}
+
 .lines-button.x2 .lines{
     transition: background .3s .6s ease;
 
@@ -91,7 +109,6 @@ body {
       transition: top .3s .6s ease, transform .3s ease;
     }
 }
-
 
 .lines-button.x2.close .lines{
 
