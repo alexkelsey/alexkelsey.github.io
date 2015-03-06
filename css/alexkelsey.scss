@@ -1,7 +1,18 @@
-/* Colours */
 $background: #363640;
 $menu: #171721;
 $accent: #F22E9C;
+$color: #FFF;
+$button-size : 3.5rem;
+$transition: .3s;
+
+@mixin line {
+	display: inline-block;
+	width: $button-size;
+	height: $button-size / 7;
+	background: $color;
+	border-radius: $button-size / 14;
+	transition: $transition;
+}
 
 body {
 	background-color: $background;
@@ -10,7 +21,6 @@ body {
 	overflow: hidden;
 }
 
-/* Band */
 #band {
 	background-color: $menu;
 	color: #FFF;
@@ -19,27 +29,27 @@ body {
 	top: 0;
 	width: 100%;
 	z-index: 4;
-}
 
-#band h1 {
-	float: left;
-	font-family: 'Lato', sans-serif;
-	font-size: 18px;
-	font-weight: 300;
-	line-height: 70px;
-	margin: 0 0 0 20px;
-	text-transform: uppercase;
-}
+	h1 {
+		float: left;
+		font-family: 'Lato', sans-serif;
+		font-size: 18px;
+		font-weight: 300;
+		line-height: 70px;
+		margin: 0 0 0 20px;
+		text-transform: uppercase;
+	}
 
-#band em {
-	color: $accent;
-	font-style: normal;
-}
+	em {
+		color: $accent;
+		font-style: normal;
+	}
 
-#band img {
-	float: left;
-	margin: 3px 0 0;
-	max-height: 62px;
+	img {
+		float: left;
+		margin: 3px 0 0;
+		max-height: 62px;
+	}
 }
 
 #menuToggle {
@@ -55,6 +65,43 @@ body {
 	text-align: center;
 	width: 70px;
 }
+
+.lines-button {
+  display: inline-block;
+  padding: $button-size/2 $button-size/4;
+  transition: .3s;
+  cursor: pointer;
+  user-select: none;
+  border-radius: $button-size/7;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    transition: 0;
+    background: rgba(0,0,0,.1);
+  }
+}
+
+.lines {
+
+	@include line;
+	position: relative;
+
+	&:before, &:after {
+
+		@include line;
+		position: absolute;
+		left:0;
+		content: '';
+		transform-origin: $button-size/14 center;
+	}
+
+	&:before { top: $button-size/4; }
+	&:after { top: -$button-size/4; }
+}
+
 
 /* Menu */
 #menu {

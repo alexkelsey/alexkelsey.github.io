@@ -1,4 +1,3 @@
-/* Colours */
 body {
   background-color: #363640;
   margin: 0;
@@ -6,7 +5,6 @@ body {
   overflow: hidden;
 }
 
-/* Band */
 #band {
   background-color: #171721;
   color: #FFF;
@@ -16,7 +14,6 @@ body {
   width: 100%;
   z-index: 4;
 }
-
 #band h1 {
   float: left;
   font-family: 'Lato', sans-serif;
@@ -26,12 +23,10 @@ body {
   margin: 0 0 0 20px;
   text-transform: uppercase;
 }
-
 #band em {
   color: #F22E9C;
   font-style: normal;
 }
-
 #band img {
   float: left;
   margin: 3px 0 0;
@@ -50,6 +45,59 @@ body {
   right: 0;
   text-align: center;
   width: 70px;
+}
+
+.lines-button {
+  display: inline-block;
+  padding: 1.75rem 0.875rem;
+  -webkit-transition: .3s;
+          transition: .3s;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-radius: 0.5rem;
+}
+.lines-button:hover {
+  opacity: 1;
+}
+.lines-button:active {
+  -webkit-transition: 0;
+          transition: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.lines {
+  display: inline-block;
+  width: 3.5rem;
+  height: 0.5rem;
+  background: #FFF;
+  border-radius: 0.25rem;
+  -webkit-transition: 0.3s;
+          transition: 0.3s;
+  position: relative;
+}
+.lines:before, .lines:after {
+  display: inline-block;
+  width: 3.5rem;
+  height: 0.5rem;
+  background: #FFF;
+  border-radius: 0.25rem;
+  -webkit-transition: 0.3s;
+          transition: 0.3s;
+  position: absolute;
+  left: 0;
+  content: '';
+  -webkit-transform-origin: 0.25rem center;
+      -ms-transform-origin: 0.25rem center;
+          transform-origin: 0.25rem center;
+}
+.lines:before {
+  top: 0.875rem;
+}
+.lines:after {
+  top: -0.875rem;
 }
 
 /* Menu */
