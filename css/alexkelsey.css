@@ -97,8 +97,8 @@ body {
 }
 
 .lines-button.x2 .lines {
-  -webkit-transition: background 300ms 300ms ease;
-          transition: background 300ms 300ms ease;
+  -webkit-transition: background 0 300ms ease;
+          transition: background 0 300ms ease;
 }
 .lines-button.x2 .lines:before, .lines-button.x2 .lines:after {
   -webkit-transform-origin: 50% 50%;
@@ -109,8 +109,8 @@ body {
 }
 
 .lines-button.x2.close .lines {
-  -webkit-transition: background 300ms 300ms ease;
-          transition: background 300ms 300ms ease;
+  -webkit-transition: background 0 300ms ease;
+          transition: background 0 300ms ease;
   background: transparent;
 }
 .lines-button.x2.close .lines:before, .lines-button.x2.close .lines:after {
