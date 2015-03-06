@@ -79,11 +79,11 @@ body {
   color: #FFF;
   font-family: 'Lato', sans-serif;
   font-size: 18px;
-  padding: 20px;
+  padding: 20px 30px;
   margin: 0 0 10px;
   text-align: center;
   text-decoration: none;
-  width: 70px;
+  width: 94px;
 }
 
 #menu .active,
