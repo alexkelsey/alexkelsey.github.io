@@ -97,8 +97,8 @@ body {
 }
 
 .lines-button.x2 .lines {
-  -webkit-transition: background .2s .3s ease;
-          transition: background .2s .3s ease;
+  -webkit-transition: background .2s 0s ease;
+          transition: background .2s 0s ease;
 }
 .lines-button.x2 .lines:before, .lines-button.x2 .lines:after {
   -webkit-transform-origin: 50% 50%;

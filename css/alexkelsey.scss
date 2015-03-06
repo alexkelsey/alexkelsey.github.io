@@ -102,7 +102,7 @@ body {
 }
 
 .lines-button.x2 .lines{
-    transition: background .2s .3s ease;
+    transition: background .2s 0s ease;
 
     &:before, &:after{
       //set transform origin back to center
