@@ -97,8 +97,8 @@ body {
 }
 
 .lines-button.x2 .lines {
-  -webkit-transition: background .2s 0s ease;
-          transition: background .2s 0s ease;
+  -webkit-transition: background .2s .3s ease;
+          transition: background .2s .3s ease;
 }
 .lines-button.x2 .lines:before, .lines-button.x2 .lines:after {
   -webkit-transform-origin: 50% 50%;
@@ -114,8 +114,8 @@ body {
   background: transparent;
 }
 .lines-button.x2.close .lines:before, .lines-button.x2.close .lines:after {
-  -webkit-transition: top .2s ease-in, -webkit-transform .2s .4s ease-out;
-          transition: top .2s ease-in, transform .2s .4s ease-out;
+  -webkit-transition: top .2s ease-in, -webkit-transform .1s .4s ease-out;
+          transition: top .2s ease-in, transform .1s .4s ease-out;
   top: 0;
   width: 35px;
 }
