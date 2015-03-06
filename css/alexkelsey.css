@@ -203,17 +203,20 @@ li:hover .overlay i {
 .scrollerNavigation i {
   color: #FFF;
   font-size: 24px;
-  -webkit-transition: all 400ms ease-in-out;
-          transition: all 400ms ease-in-out;
+  -webkit-transition: all 1000ms;
+          transition: all 1000ms;
+}
+
+.scrollerNavigation.disabled i {
+  opacity: 0.2;
+}
+
+.scrollerNavigation.disabled:hover i {
+  color: #FFF;
 }
 
 .scrollerNavigation:hover i {
   color: #F22E9C;
-}
-
-.scrollerNavigation.disabled i {
-  color: #FFF;
-  opacity: 0.2;
 }
 
 #scrollerPrevious {
