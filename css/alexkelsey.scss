@@ -101,23 +101,23 @@ body {
 	&:after { top: -$button-size/4; }
 }
 
-.lines-button.x2 .lines{
-    transition: background .1s .2s ease;
+.lines-button.x2 .lines {
+    transition: background 150ms 300ms ease;
 
     &:before, &:after{
       //set transform origin back to center
       transform-origin: 50% 50%;
-      transition: top .1s .2s ease-in, transform .1s ease-out;
+      transition: top 150ms 300ms ease-in, transform 150ms ease-out;
     }
 }
 
 .lines-button.x2.close .lines {
 
-    transition: background .1s 0s ease;
+    transition: background 150ms 0s ease;
     background: transparent;
 
     &:before, &:after{
-      transition: top .1s ease-in, transform .1s .2s ease-out;
+      transition: top 150ms ease-in, transform 150ms 300ms ease-out;
       top:0;
       width: $button-size;
     }
