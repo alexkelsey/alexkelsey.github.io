@@ -207,12 +207,13 @@ li:hover .overlay i {
           transition: all 400ms ease-in-out;
 }
 
-.scrollerNavigation.disabled i {
-  opacity: 0.2;
-}
-
 .scrollerNavigation:hover i {
   color: #F22E9C;
+}
+
+.scrollerNavigation.disabled i {
+  color: #FFF;
+  opacity: 0.2;
 }
 
 #scrollerPrevious {
