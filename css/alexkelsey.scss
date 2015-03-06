@@ -10,7 +10,7 @@ $easeOutCirc: cubic-bezier(0.075, 0.820, 0.165, 1.000);
 @mixin line {
 	display: inline-block;
 	width: 35px;
-	height: 4px;
+	height: 3px;
 	background: $color;
 	border-radius: 2px;
 	transition: $transition;
