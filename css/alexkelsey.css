@@ -38,6 +38,20 @@ body {
   max-height: 62px;
 }
 
+#menuToggle {
+  background-color: #171721;
+  color: #FFF;
+  cursor: pointer;
+  font-size: 24px;
+  height: 70px;
+  line-height: 70px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  width: 70px;
+}
+
 /* Menu */
 #menu {
   background: #171721;
@@ -74,20 +88,6 @@ body {
 #memu strong {
   font-weight: 700;
   font-size: 14px;
-}
-
-#menuToggle {
-  background-color: #171721;
-  color: #FFF;
-  cursor: pointer;
-  font-size: 24px;
-  height: 70px;
-  line-height: 70px;
-  position: relative;
-  top: 0;
-  left: -70px;
-  text-align: center;
-  width: 70px;
 }
 
 #menuClose {
