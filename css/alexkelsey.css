@@ -65,34 +65,34 @@ body {
 
 .lines {
   display: inline-block;
-  width: 50px;
-  height: 7.14286px;
+  width: 35px;
+  height: 5px;
   background: #FFF;
-  border-radius: 3.57143px;
+  border-radius: 2.5px;
   -webkit-transition: 0.3s;
           transition: 0.3s;
   position: relative;
 }
 .lines:before, .lines:after {
   display: inline-block;
-  width: 50px;
-  height: 7.14286px;
+  width: 35px;
+  height: 5px;
   background: #FFF;
-  border-radius: 3.57143px;
+  border-radius: 2.5px;
   -webkit-transition: 0.3s;
           transition: 0.3s;
   position: absolute;
   left: 0;
   content: '';
-  -webkit-transform-origin: 3.57143px center;
-      -ms-transform-origin: 3.57143px center;
-          transform-origin: 3.57143px center;
+  -webkit-transform-origin: 2.5px center;
+      -ms-transform-origin: 2.5px center;
+          transform-origin: 2.5px center;
 }
 .lines:before {
-  top: 12.5px;
+  top: 8.75px;
 }
 .lines:after {
-  top: -12.5px;
+  top: -8.75px;
 }
 
 .lines-button.x2.close .lines {
@@ -104,7 +104,7 @@ body {
   -webkit-transition: top .3s ease, -webkit-transform .3s .5s ease;
           transition: top .3s ease, transform .3s .5s ease;
   top: 0;
-  width: 50px;
+  width: 35px;
 }
 .lines-button.x2.close .lines:before {
   -webkit-transform: rotate3d(0, 0, 1, 45deg);
