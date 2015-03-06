@@ -102,18 +102,22 @@ body {
 }
 
 .lines-button.x2 .lines{
+    transition: background .2s .3s ease;
 
     &:before, &:after{
       //set transform origin back to center
       transform-origin: 50% 50%;
-      transition: top .2s .3s ease, transform .2s ease;
+      transition: top .2s .3s ease-in, transform .2s ease-out;
     }
 }
 
 .lines-button.x2.close .lines {
 
+    transition: background .2s 0s ease;
+    background: transparent;
+
     &:before, &:after{
-      transition: top .2s ease, transform .2s .3s ease;
+      transition: top .2s ease-in, transform .2s .4s ease-out;
       top:0;
       width: $button-size;
     }
