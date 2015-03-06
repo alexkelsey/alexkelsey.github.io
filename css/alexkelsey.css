@@ -52,6 +52,7 @@ body {
   -webkit-transition: 300ms;
           transition: 300ms;
   cursor: pointer;
+  width: 100%;
 }
 .lines-button:hover {
   opacity: 1;
@@ -64,34 +65,34 @@ body {
 
 .lines {
   display: inline-block;
-  width: 3.5rem;
-  height: 0.5rem;
+  width: 70px;
+  height: 10px;
   background: #FFF;
-  border-radius: 0.25rem;
+  border-radius: 5px;
   -webkit-transition: 0.3s;
           transition: 0.3s;
   position: relative;
 }
 .lines:before, .lines:after {
   display: inline-block;
-  width: 3.5rem;
-  height: 0.5rem;
+  width: 70px;
+  height: 10px;
   background: #FFF;
-  border-radius: 0.25rem;
+  border-radius: 5px;
   -webkit-transition: 0.3s;
           transition: 0.3s;
   position: absolute;
   left: 0;
   content: '';
-  -webkit-transform-origin: 0.25rem center;
-      -ms-transform-origin: 0.25rem center;
-          transform-origin: 0.25rem center;
+  -webkit-transform-origin: 5px center;
+      -ms-transform-origin: 5px center;
+          transform-origin: 5px center;
 }
 .lines:before {
-  top: 0.875rem;
+  top: 17.5px;
 }
 .lines:after {
-  top: -0.875rem;
+  top: -17.5px;
 }
 
 .lines-button.x2.close .lines {
@@ -103,7 +104,7 @@ body {
   -webkit-transition: top .3s ease, -webkit-transform .3s .5s ease;
           transition: top .3s ease, transform .3s .5s ease;
   top: 0;
-  width: 3.5rem;
+  width: 70px;
 }
 .lines-button.x2.close .lines:before {
   -webkit-transform: rotate3d(0, 0, 1, 45deg);
