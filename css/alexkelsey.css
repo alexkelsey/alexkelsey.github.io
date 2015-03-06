@@ -97,15 +97,15 @@ body {
 }
 
 .lines-button.x2 .lines {
-  -webkit-transition: background 250ms 250ms ease;
-          transition: background 250ms 250ms ease;
+  -webkit-transition: background 300ms 300ms ease;
+          transition: background 300ms 300ms ease;
 }
 .lines-button.x2 .lines:before, .lines-button.x2 .lines:after {
   -webkit-transform-origin: 50% 50%;
       -ms-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
-  -webkit-transition: top 250ms 250ms cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 250ms cubic-bezier(0.6, 0.04, 0.98, 0.335);
-          transition: top 250ms 250ms cubic-bezier(0.075, 0.82, 0.165, 1), transform 250ms cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  -webkit-transition: top 300ms 300ms cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 300ms cubic-bezier(0.6, 0.04, 0.98, 0.335);
+          transition: top 300ms 300ms cubic-bezier(0.075, 0.82, 0.165, 1), transform 300ms cubic-bezier(0.6, 0.04, 0.98, 0.335);
 }
 
 .lines-button.x2.close .lines {
@@ -114,8 +114,8 @@ body {
   background: transparent;
 }
 .lines-button.x2.close .lines:before, .lines-button.x2.close .lines:after {
-  -webkit-transition: top 250ms cubic-bezier(0.6, 0.04, 0.98, 0.335), -webkit-transform 250ms 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
-          transition: top 250ms cubic-bezier(0.6, 0.04, 0.98, 0.335), transform 250ms 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-transition: top 300ms cubic-bezier(0.6, 0.04, 0.98, 0.335), -webkit-transform 300ms 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+          transition: top 300ms cubic-bezier(0.6, 0.04, 0.98, 0.335), transform 300ms 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
   top: 0;
   width: 35px;
 }

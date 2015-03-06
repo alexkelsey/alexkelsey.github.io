@@ -104,12 +104,12 @@ body {
 }
 
 .lines-button.x2 .lines {
-    transition: background 250ms 250ms ease;
+    transition: background 300ms 300ms ease;
 
     &:before, &:after{
       //set transform origin back to center
       transform-origin: 50% 50%;
-      transition: top 250ms 250ms $easeOutCirc, transform 250ms $easeInCirc;
+      transition: top 300ms 300ms $easeOutCirc, transform 300ms $easeInCirc;
     }
 }
 
@@ -119,7 +119,7 @@ body {
     background: transparent;
 
     &:before, &:after{
-      transition: top 250ms $easeInCirc, transform 250ms 250ms $easeOutCirc;
+      transition: top 300ms $easeInCirc, transform 300ms 300ms $easeOutCirc;
       top:0;
       width: $button-size;
     }
