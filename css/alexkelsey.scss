@@ -4,8 +4,8 @@ $accent: #F22E9C;
 $color: #FFF;
 $button-size: 35px;
 $transition: 200ms;
-$easeInCirc: cubic-bezier(0.600, 0.040, 0.980, 0.335);
-$easeOutCirc: cubic-bezier(0.075, 0.820, 0.165, 1.000);
+$easeInCirc: cubic-bezier(0.4, 0, 1, 0.4);
+$easeOutCirc: cubic-bezier(0, 0.4, 0.4, 1);
 
 @mixin line {
 	display: inline-block;
