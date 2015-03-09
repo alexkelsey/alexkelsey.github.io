@@ -377,6 +377,10 @@ li:hover .overlay i {
   right: -50px;
   width: 50px;
 }
+#videoClose .lines {
+  left: 6px;
+  top: 14px;
+}
 
 /* Width Based */
 @media all and (max-width: 767px) {
