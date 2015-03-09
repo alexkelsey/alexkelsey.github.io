@@ -102,7 +102,7 @@ function addVideo (videoHref) {
     $('#videoPlayer').addClass('dropin');
     setTimeout(function () {
         $('#videoContent').html('<iframe src="' + videoHref + '?api=1&amp;player_id=player&amp;autoplay=1&amp;badge=0&amp;byline=0&amp;color=F22E9C&amp;portrait=0&amp;title=0" width="576" height="315" frameborder="0" webkitallowfullscreen allowfullscreen></iframe>');
-    }, 2000);
+    }, 800);
 }
 
 /* How to open the video */
@@ -124,7 +124,7 @@ $('#videoClose').on('vclick', function() {
     $('#videoPlayer').attr('class', '');
     setTimeout(function () {
         $('#videoContent').html('');
-    }, 2000);
+    }, 800);
     return false;
 });
 
