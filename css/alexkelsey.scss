@@ -104,22 +104,22 @@ body {
 }
 
 .lines-button.x2 .lines {
-    transition: background 0 300ms ease;
+    transition: background 0 350ms ease;
 
     &:before, &:after{
       //set transform origin back to center
       transform-origin: 50% 50%;
-      transition: top 300ms 300ms $easeOutCirc, transform 300ms $easeInCirc;
+      transition: top 350ms 350ms $easeOutCirc, transform 350ms $easeInCirc;
     }
 }
 
 .lines-button.x2.close .lines {
 
-    transition: background 0 300ms ease;
+    transition: background 0 350ms ease;
     background: transparent;
 
     &:before, &:after{
-      transition: top 300ms $easeInCirc, transform 300ms 300ms $easeOutCirc;
+      transition: top 350ms $easeInCirc, transform 350ms 350ms $easeOutCirc;
       top:0;
       width: $button-size;
     }
@@ -344,7 +344,7 @@ li:hover .overlay i {
     padding: 10px;
 	position: absolute;
     top: -300px;
-    transition: top 2s ease-in-out;
+    transition: top 1s ease-in-out;
     width: 576px;
     z-index: 4;
 }

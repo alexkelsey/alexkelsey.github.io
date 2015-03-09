@@ -97,25 +97,25 @@ body {
 }
 
 .lines-button.x2 .lines {
-  -webkit-transition: background 0 300ms ease;
-          transition: background 0 300ms ease;
+  -webkit-transition: background 0 350ms ease;
+          transition: background 0 350ms ease;
 }
 .lines-button.x2 .lines:before, .lines-button.x2 .lines:after {
   -webkit-transform-origin: 50% 50%;
       -ms-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
-  -webkit-transition: top 300ms 300ms cubic-bezier(0, 0.4, 0.4, 1), -webkit-transform 300ms cubic-bezier(0.4, 0, 1, 0.4);
-          transition: top 300ms 300ms cubic-bezier(0, 0.4, 0.4, 1), transform 300ms cubic-bezier(0.4, 0, 1, 0.4);
+  -webkit-transition: top 350ms 350ms cubic-bezier(0, 0.4, 0.4, 1), -webkit-transform 350ms cubic-bezier(0.4, 0, 1, 0.4);
+          transition: top 350ms 350ms cubic-bezier(0, 0.4, 0.4, 1), transform 350ms cubic-bezier(0.4, 0, 1, 0.4);
 }
 
 .lines-button.x2.close .lines {
-  -webkit-transition: background 0 300ms ease;
-          transition: background 0 300ms ease;
+  -webkit-transition: background 0 350ms ease;
+          transition: background 0 350ms ease;
   background: transparent;
 }
 .lines-button.x2.close .lines:before, .lines-button.x2.close .lines:after {
-  -webkit-transition: top 300ms cubic-bezier(0.4, 0, 1, 0.4), -webkit-transform 300ms 300ms cubic-bezier(0, 0.4, 0.4, 1);
-          transition: top 300ms cubic-bezier(0.4, 0, 1, 0.4), transform 300ms 300ms cubic-bezier(0, 0.4, 0.4, 1);
+  -webkit-transition: top 350ms cubic-bezier(0.4, 0, 1, 0.4), -webkit-transform 350ms 350ms cubic-bezier(0, 0.4, 0.4, 1);
+          transition: top 350ms cubic-bezier(0.4, 0, 1, 0.4), transform 350ms 350ms cubic-bezier(0, 0.4, 0.4, 1);
   top: 0;
   width: 35px;
 }
@@ -358,8 +358,8 @@ li:hover .overlay i {
   padding: 10px;
   position: absolute;
   top: -300px;
-  -webkit-transition: top 2s ease-in-out;
-          transition: top 2s ease-in-out;
+  -webkit-transition: top 1s ease-in-out;
+          transition: top 1s ease-in-out;
   width: 576px;
   z-index: 4;
 }
